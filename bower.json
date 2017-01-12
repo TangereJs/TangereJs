@@ -64,6 +64,9 @@
     "at-carbon-icon-color": "0.8-preview",
     "at-carbon-icon": "0.8-preview",
     "at-doc-viewer": "0.8-preview",
-    "at-theme": "0.8-preview"
+    "at-theme": "0.8-preview",
+    "at-core-signals": "0.8-preview",
+    "iron-demo-helpers": "master",
+    "paper-fab": "master"
   }
 }
