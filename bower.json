@@ -52,7 +52,18 @@
     "moment": "master",
     "paper-shadow": "master",
     "iron-flex-layout": "master",
+    "iron-icon": "master",
+    "iron-icons": "master",
     "sortable": "master",
-    "google-apis": "master"
+    "iron-resizable-behavior": "master",
+    "iron-selector": "master",
+    "google-apis": "master",
+    "core-ajax": "master",
+    "tangere": "0.8-preview",
+    "paper-menu": "master",
+    "at-carbon-icon-color": "0.8-preview",
+    "at-carbon-icon": "0.8-preview",
+    "at-doc-viewer": "0.8-preview",
+    "at-theme": "0.8-preview"
   }
 }
