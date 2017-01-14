@@ -27,7 +27,7 @@
     "branch": "master",
     "commit": "a275152b49258a1794e9680d7d1f7b0d8f96d663"
   },
-  "_source": "git://github.com/PolymerElements/paper-input-elements.git",
+  "_source": "https://github.com/PolymerElements/paper-input-elements.git",
   "_target": "*",
   "_originalSource": "PolymerElements/paper-input-elements"
 }

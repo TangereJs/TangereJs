@@ -20,7 +20,7 @@
     "branch": "master",
     "commit": "f5ac5775019014a2340551efeff2ff4904aaa01f"
   },
-  "_source": "git://github.com/PolymerElements/paper-overlay-elements.git",
+  "_source": "https://github.com/PolymerElements/paper-overlay-elements.git",
   "_target": "*",
   "_originalSource": "PolymerElements/paper-overlay-elements"
 }

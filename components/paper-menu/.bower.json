@@ -41,7 +41,7 @@
     "branch": "master",
     "commit": "b1fd199783a39a37e9d570dd3660f4fd68b33b73"
   },
-  "_source": "git://github.com/PolymerElements/paper-menu.git",
+  "_source": "https://github.com/PolymerElements/paper-menu.git",
   "_target": "master",
   "_originalSource": "PolymerElements/paper-menu"
 }

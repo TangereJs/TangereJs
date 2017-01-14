@@ -22,7 +22,7 @@
     "branch": "master",
     "commit": "ee6be1215c9ea0e910acdd8fdd1eb393b6ffdd6f"
   },
-  "_source": "git://github.com/Polymer/layout.git",
+  "_source": "https://github.com/Polymer/layout.git",
   "_target": "master",
   "_originalSource": "Polymer/layout"
 }

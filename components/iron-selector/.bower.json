@@ -40,7 +40,7 @@
     "branch": "master",
     "commit": "f894fa4239d27d06900497e75f456fa3eaa785cc"
   },
-  "_source": "git://github.com/PolymerElements/iron-selector.git",
+  "_source": "https://github.com/PolymerElements/iron-selector.git",
   "_target": "master",
   "_originalSource": "PolymerElements/iron-selector"
 }

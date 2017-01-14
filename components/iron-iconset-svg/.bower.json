@@ -37,7 +37,7 @@
     "branch": "master",
     "commit": "6ec885854c829831e1e766ce6f82206d728f892b"
   },
-  "_source": "git://github.com/polymerelements/iron-iconset-svg.git",
+  "_source": "https://github.com/polymerelements/iron-iconset-svg.git",
   "_target": "master",
   "_originalSource": "polymerelements/iron-iconset-svg"
 }

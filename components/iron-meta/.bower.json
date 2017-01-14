@@ -33,7 +33,7 @@
     "branch": "master",
     "commit": "91c65a7b72cf691aa3951ee3f34461e1099e0d8a"
   },
-  "_source": "git://github.com/polymerelements/iron-meta.git",
+  "_source": "https://github.com/polymerelements/iron-meta.git",
   "_target": "master",
   "_originalSource": "polymerelements/iron-meta"
 }

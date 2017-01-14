@@ -30,7 +30,7 @@
     "branch": "master",
     "commit": "dd6d66cc2d4c2982ae719044ac73b82b7eca0c1a"
   },
-  "_source": "git://github.com/TangereJs/c3.git",
+  "_source": "https://github.com/TangereJs/c3.git",
   "_target": "master",
   "_originalSource": "TangereJs/c3"
 }

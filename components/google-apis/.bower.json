@@ -32,7 +32,7 @@
     "branch": "master",
     "commit": "befa10d88abb7179b86dc804815731710f71e27d"
   },
-  "_source": "git://github.com/TangereJs/google-apis.git",
+  "_source": "https://github.com/TangereJs/google-apis.git",
   "_target": "master",
   "_originalSource": "TangereJs/google-apis"
 }

@@ -23,7 +23,7 @@
     "branch": "master",
     "commit": "4d87845222a5d83af3651d77cfa1e014d7c9475d"
   },
-  "_source": "git://github.com/PolymerElements/iron-input-elements.git",
+  "_source": "https://github.com/PolymerElements/iron-input-elements.git",
   "_target": "*",
   "_originalSource": "PolymerElements/iron-input-elements"
 }

@@ -30,7 +30,7 @@
     "branch": "master",
     "commit": "73088f2690f171a8c84320de157ca293567ca88a"
   },
-  "_source": "git://github.com/PolymerElements/paper-ui-elements.git",
+  "_source": "https://github.com/PolymerElements/paper-ui-elements.git",
   "_target": "*",
   "_originalSource": "PolymerElements/paper-ui-elements"
 }

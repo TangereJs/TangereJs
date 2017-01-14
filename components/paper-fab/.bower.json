@@ -41,7 +41,7 @@
     "branch": "master",
     "commit": "179fe7d7a6e86638383c79e3502690a19cd01626"
   },
-  "_source": "git://github.com/PolymerElements/paper-fab.git",
+  "_source": "https://github.com/PolymerElements/paper-fab.git",
   "_target": "master",
   "_originalSource": "PolymerElements/paper-fab"
 }

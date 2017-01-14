@@ -12,7 +12,7 @@
     "branch": "master",
     "commit": "222bd33cbda8a7468dcf195082c255cd0cf89c5b"
   },
-  "_source": "git://github.com/TangereJs/d3-elements.git",
+  "_source": "https://github.com/TangereJs/d3-elements.git",
   "_target": "master",
   "_originalSource": "TangereJs/d3-elements"
 }

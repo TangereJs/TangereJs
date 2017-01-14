@@ -42,7 +42,7 @@
     "branch": "master",
     "commit": "84ae0a9ddd25a31882c83174d3e00f321b2857e0"
   },
-  "_source": "git://github.com/PolymerElements/paper-dialog.git",
+  "_source": "https://github.com/PolymerElements/paper-dialog.git",
   "_target": "master",
   "_originalSource": "PolymerElements/paper-dialog"
 }

@@ -62,7 +62,7 @@
     "branch": "master",
     "commit": "ff42faedcfe8247ac52dbef0b77edf9fbc142f81"
   },
-  "_source": "git://github.com/PolymerElements/iron-elements.git",
+  "_source": "https://github.com/PolymerElements/iron-elements.git",
   "_target": "master",
   "_originalSource": "PolymerElements/iron-elements"
 }

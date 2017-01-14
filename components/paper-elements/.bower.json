@@ -38,7 +38,7 @@
     "branch": "master",
     "commit": "b20e74073c1c7bdd92264d826b41ea9fceb85f65"
   },
-  "_source": "git://github.com/PolymerElements/paper-elements.git",
+  "_source": "https://github.com/PolymerElements/paper-elements.git",
   "_target": "master",
   "_originalSource": "PolymerElements/paper-elements"
 }

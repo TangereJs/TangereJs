@@ -38,7 +38,7 @@
     "branch": "master",
     "commit": "345e2c5fee963c955b2e6ceb172d89309a815de1"
   },
-  "_source": "git://github.com/Polymer/polymer.git",
+  "_source": "https://github.com/Polymer/polymer.git",
   "_target": "master",
   "_originalSource": "Polymer/polymer"
 }

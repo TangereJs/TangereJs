@@ -38,7 +38,7 @@
     "branch": "master",
     "commit": "e77365a99a4e6331f95048dcc9f7da3496b3ff2d"
   },
-  "_source": "git://github.com/PolymerElements/iron-icon.git",
+  "_source": "https://github.com/PolymerElements/iron-icon.git",
   "_target": "master",
   "_originalSource": "PolymerElements/iron-icon"
 }

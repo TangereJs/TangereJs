@@ -39,7 +39,7 @@
     "branch": "master",
     "commit": "04ecc93bbf92673c9ccb478d0fb5c5d2e5880e34"
   },
-  "_source": "git://github.com/TangereJS/Sortable.git",
+  "_source": "https://github.com/TangereJs/Sortable.git",
   "_target": "master",
-  "_originalSource": "TangereJS/Sortable"
+  "_originalSource": "TangereJs/Sortable"
 }

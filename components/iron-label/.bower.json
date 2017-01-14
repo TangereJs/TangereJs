@@ -36,7 +36,7 @@
     "branch": "master",
     "commit": "9873b006a12f2cf0203e3e07971ededdd8ffe315"
   },
-  "_source": "git://github.com/PolymerElements/iron-label.git",
+  "_source": "https://github.com/PolymerElements/iron-label.git",
   "_target": "master",
   "_originalSource": "PolymerElements/iron-label"
 }

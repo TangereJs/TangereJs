@@ -42,7 +42,7 @@
     "branch": "master",
     "commit": "597add130503e789ca9e831280d084c1ad64d8a0"
   },
-  "_source": "git://github.com/PolymerElements/paper-checkbox.git",
+  "_source": "https://github.com/PolymerElements/paper-checkbox.git",
   "_target": "master",
   "_originalSource": "PolymerElements/paper-checkbox"
 }

@@ -40,7 +40,7 @@
     "branch": "master",
     "commit": "43a12b28fb8912360d733e2505a3847f10bddc56"
   },
-  "_source": "git://github.com/PolymerElements/paper-radio-group.git",
+  "_source": "https://github.com/PolymerElements/paper-radio-group.git",
   "_target": "master",
   "_originalSource": "PolymerElements/paper-radio-group"
 }

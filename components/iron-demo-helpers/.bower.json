@@ -46,7 +46,7 @@
     "branch": "master",
     "commit": "9c4c365e95a8bffccf134e3d103a399f548f523c"
   },
-  "_source": "git://github.com/PolymerElements/iron-demo-helpers.git",
+  "_source": "https://github.com/PolymerElements/iron-demo-helpers.git",
   "_target": "master",
   "_originalSource": "PolymerElements/iron-demo-helpers"
 }

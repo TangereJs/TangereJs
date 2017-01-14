@@ -27,7 +27,7 @@
     "branch": "master",
     "commit": "a10b22654c9275da1050e1513bbd834646c0bde3"
   },
-  "_source": "git://github.com/TangereJs/d3.git",
+  "_source": "https://github.com/TangereJs/d3.git",
   "_target": "master",
   "_originalSource": "TangereJs/d3"
 }

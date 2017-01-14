@@ -42,7 +42,7 @@
     "tag": "v1.0.2",
     "commit": "0a277c5c24e2448fbf8010a24b866f9c9ec1bf11"
   },
-  "_source": "git://github.com/PolymerElements/paper-swatch-picker.git",
+  "_source": "https://github.com/PolymerElements/paper-swatch-picker.git",
   "_target": "*",
   "_originalSource": "PolymerElements/paper-swatch-picker"
 }

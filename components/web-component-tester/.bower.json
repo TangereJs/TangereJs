@@ -32,21 +32,21 @@
     "mocha": "^3.1.2",
     "sinon-chai": "^2.7.0",
     "sinonjs": "^1.14.1",
-    "stacky": "^1.3.0"
+    "stacky": "^1.3.0",
+    "test-fixture": "polymerelements/test-fixture#^2.0.0"
   },
   "devDependencies": {
     "polymer": "Polymer/polymer#^1.5.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.22",
-    "test-fixture": "polymerelements/test-fixture#^1.0.0"
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.22"
   },
   "homepage": "https://github.com/Polymer/web-component-tester",
-  "_release": "434e0f085c",
+  "_release": "eb7d149192",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "434e0f085c3118c68544a68f0676fe50625c74e8"
+    "commit": "eb7d149192c66f4cf99ad78534218b57026ffe75"
   },
-  "_source": "git://github.com/Polymer/web-component-tester.git",
+  "_source": "https://github.com/Polymer/web-component-tester.git",
   "_target": "master",
   "_originalSource": "Polymer/web-component-tester"
 }

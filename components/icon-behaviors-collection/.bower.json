@@ -22,7 +22,7 @@
     "branch": "master",
     "commit": "e3f9bcedd91b6775b1664f8b205719d6dd3fe17c"
   },
-  "_source": "git://github.com/PolymerElements/iron-behaviors-collection.git",
+  "_source": "https://github.com/PolymerElements/iron-behaviors-collection.git",
   "_target": "*",
   "_originalSource": "PolymerElements/iron-behaviors-collection"
 }

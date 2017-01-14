@@ -36,7 +36,7 @@
     "branch": "master",
     "commit": "a6a66288669d59202b23125b70de3d4d91bd528e"
   },
-  "_source": "git://github.com/PolymerElements/iron-collapse.git",
+  "_source": "https://github.com/PolymerElements/iron-collapse.git",
   "_target": "master",
   "_originalSource": "PolymerElements/iron-collapse"
 }

@@ -34,7 +34,7 @@
     "branch": "master",
     "commit": "b8c85345dfbf29cdf6b34d92d3ff780fea95aa94"
   },
-  "_source": "git://github.com/PolymerElements/iron-flex-layout.git",
+  "_source": "https://github.com/PolymerElements/iron-flex-layout.git",
   "_target": "master",
   "_originalSource": "PolymerElements/iron-flex-layout"
 }
