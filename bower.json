@@ -38,7 +38,7 @@
     "test-fixture": "^1.0.0",
     "google-map": "master",
     "font-roboto": "master",
-    "paper-ripple": "master",
+    "paper-ripple": "^1.0.0",
     "paper-styles": "master",
     "code-mirror": "master"
   }
