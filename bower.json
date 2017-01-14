@@ -5,6 +5,7 @@
     "polymer": "Polymer/polymer#master",
     "iron-elements": "PolymerElements/iron-elements#master",
     "paper-elements": "PolymerElements/paper-elements#master",
+    "font-roboto-local": "PolymerElements/font-roboto-local#master",
     "at-elements": "TangereJs/at-elements#master"
   },
   "resolutions": {
@@ -37,7 +38,8 @@
     "layout": "master",
     "test-fixture": "^1.0.0",
     "google-map": "master",
-    "font-roboto": "master",
+    "font-roboto": "^1.0.0",
+    "font-roboto-local": "^1.0.0",
     "paper-ripple": "^1.0.0",
     "paper-styles": "master",
     "code-mirror": "master"
