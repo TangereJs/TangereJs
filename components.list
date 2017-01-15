@@ -103,6 +103,7 @@ at-silver-transform
 at-theme
 at-theme-default
 code-mirror
+core-ajax
 core-media-query
 liquid-template
 tangere
