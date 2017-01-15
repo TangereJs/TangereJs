@@ -11,7 +11,7 @@
   "resolutions": {
     "polymer": "master",
     "paper-input": "master",
-    "core-ajax": "0.8-preview-main",
+    "core-ajax": "master",
     "iron-label": "master",
     "iron-resizable-behavior": "master",
     "promise-polyfill": "master",
