@@ -47,11 +47,11 @@
     "web-component-tester": "^4.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
-  "_release": "d825aedf8f",
+  "_release": "e261356be3",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "d825aedf8f6099e832fde9d028b53c89e6ea9633"
+    "commit": "e261356be31fc628dc6cc8e0172aabe697205851"
   },
   "_source": "https://github.com/PolymerElements/paper-input.git",
   "_target": "master",
