@@ -34,11 +34,11 @@
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
   "main": "paper-toggle-button.html",
-  "_release": "d23f91818e",
+  "_release": "2f279868a9",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "d23f91818e4f7d4dbd474e0cb0c5c462ba4ae07c"
+    "commit": "2f279868a9c8965aba76017c7ee6008ac4879f6a"
   },
   "_source": "https://github.com/PolymerElements/paper-toggle-button.git",
   "_target": "master",
