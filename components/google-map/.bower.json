@@ -36,11 +36,11 @@
     "web-component-tester": "*",
     "iron-component-page": "PolymerElements/iron-component-page#^1.1.7"
   },
-  "_release": "dea7eabb59",
+  "_release": "9ca485deb2",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "dea7eabb59d59876e678716b6244e2bb36390ee0"
+    "commit": "9ca485deb2a704699e716edd50b59964c3f73308"
   },
   "_source": "https://github.com/GoogleWebComponents/google-map.git",
   "_target": "master",
