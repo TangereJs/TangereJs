@@ -34,7 +34,7 @@
     // {{ 'now-freshdesk/logo.png' | component_url }} 
     //             -> /components-A2BE8CE9AB04E355526AB0555A8C572F/now-freshdesk/logo.png
     component_url: function (input) {
-      var compUrl = "/components/";
+      var compUrl = this.resolveUrl("../");
       if (window.ComponentsBase != undefined) compUrl = window.ComponentsBase;
       return compUrl + (input || '');
     },
