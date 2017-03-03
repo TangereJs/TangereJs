@@ -37,7 +37,7 @@
     "moment": "master",
     "google-apis": "master",
     "layout": "master",
-    "test-fixture": "^1.0.0",
+    "test-fixture": "^2.0.0",
     "google-map": "master",
     "font-roboto": "^1.0.0",
     "font-roboto-local": "^1.0.0",
