@@ -35,11 +35,11 @@
     "web-component-tester": "^4.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
-  "_release": "b1fd199783",
+  "_release": "7ca8ebfbdc",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "b1fd199783a39a37e9d570dd3660f4fd68b33b73"
+    "commit": "7ca8ebfbdcca22fc98e5115c0ed72bf9d05848fe"
   },
   "_source": "https://github.com/PolymerElements/paper-menu.git",
   "_target": "master",
