@@ -1,6 +1,6 @@
 {
   "name": "promise-polyfill",
-  "version": "2.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/taylorhakes/promise-polyfill",
   "authors": [
     "Taylor Hakes"
@@ -24,5 +24,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "polymer": "polymer/polymer#^1.0.0"
+  }
 }
