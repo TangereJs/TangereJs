@@ -117,5 +117,6 @@ code-mirror
 core-ajax
 core-media-query
 liquid-template
+nvd3-charts
 tangere
 paper-styles
