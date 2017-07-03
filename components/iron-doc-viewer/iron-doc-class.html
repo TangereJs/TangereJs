@@ -50,7 +50,7 @@ descriptor output by
       </h2>
 
       <marked-element sanitize markdown="[[descriptor.description]]">
-        <div slot="markdown-html"></div>
+        <div slot="markdown-html" class="markdown-html"></div>
       </marked-element>
     </section>
 
@@ -63,9 +63,6 @@ descriptor output by
 
   <script>
     (function() {
-      /**
-       * Renders documentation describing a JavaScript class.
-      */
       Polymer({
         is: 'iron-doc-class',
 

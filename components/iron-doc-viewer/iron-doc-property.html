@@ -31,7 +31,7 @@ class, etc.
 
       #polymer > * {
         background-color: #efefef;
-        color: var(--iron-doc-accent-color);
+        color: var(--iron-doc-accent-color-internal);
         padding: 1px 6px;
         margin-left: 8px;
         border-radius: 8px;
@@ -42,7 +42,7 @@ class, etc.
       }
 
       .default {
-        color: var(--iron-doc-accent-color);
+        color: var(--iron-doc-accent-color-internal);
       }
 
       .privacy {
@@ -74,7 +74,7 @@ class, etc.
 
     <div id="details">
       <marked-element sanitize id="desc" markdown="[[descriptor.description]]" hidden$="[[!descriptor.description]]">
-        <div slot="markdown-html"></div>
+        <div slot="markdown-html" class="markdown-html"></div>
       </marked-element>
     </div>
   </template>
@@ -104,7 +104,7 @@ class, etc.
           }
         },
 
-        _computePrivacy(descriptor) {
+        _computePrivacy: function(descriptor) {
           if (!descriptor || !descriptor.privacy
               || descriptor.privacy === 'public') {
             return '';

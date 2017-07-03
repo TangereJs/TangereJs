@@ -46,10 +46,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </template>
 
       <template is="dom-if" if="[[_protectedCount(descriptor.properties)]]">
-        <iron-doc-hide-bar visible="{{_showProtectedProperties}}">
-          [[_protectedCount(descriptor.properties)]] protected properties
-        </iron-doc-hide-bar>
-
         <template is="dom-if" if="[[_showProtectedProperties]]">
           <template is="dom-repeat"
                     items="[[_protected(descriptor.properties)]]"
@@ -59,6 +55,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </iron-doc-property>
           </template>
         </template>
+
+        <iron-doc-hide-bar visible="{{_showProtectedProperties}}">
+          [[_protectedCount(descriptor.properties)]] protected properties
+        </iron-doc-hide-bar>
       </template>
     </section>
 
@@ -84,12 +84,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </iron-doc-function>
       </template>
 
-      <template is="dom-if" if="[[_protectedCount(descriptor.methods, descriptor.staticMethods)]]">
-        <iron-doc-hide-bar visible="{{_showProtectedMethods}}">
-          [[_protectedCount(descriptor.methods, descriptor.staticMethods)]]
-          protected methods
-        </iron-doc-hide-bar>
-
+      <template is="dom-if" if="[[_protectedCount(descriptor.methods, _staticMethods)]]">
         <template is="dom-if" if="[[_showProtectedMethods]]">
           <template is="dom-repeat"
                     items="[[_protected(descriptor.staticMethods)]]"
@@ -107,6 +102,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </iron-doc-function>
           </template>
         </template>
+
+        <iron-doc-hide-bar visible="{{_showProtectedMethods}}">
+          [[_protectedCount(descriptor.methods, _staticMethods)]]
+          protected methods
+        </iron-doc-hide-bar>
       </template>
     </section>
 
@@ -125,10 +125,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </template>
 
       <template is="dom-if" if="[[_protectedCount(descriptor.events)]]">
-        <iron-doc-hide-bar visible="{{_showProtectedEvents}}">
-          [[_protectedCount(descriptor.events)]] protected events
-        </iron-doc-hide-bar>
-
         <template is="dom-if" if="[[_showProtectedEvents]]">
           <template is="dom-repeat"
                     items="[[_protected(descriptor.events)]]"
@@ -138,6 +134,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </iron-doc-property>
           </template>
         </template>
+
+        <iron-doc-hide-bar visible="{{_showProtectedEvents}}">
+          [[_protectedCount(descriptor.events)]] protected events
+        </iron-doc-hide-bar>
       </template>
     </section>
 
@@ -153,10 +153,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         properties: {
           _showProtectedProperties: Boolean,
           _showProtectedMethods: Boolean,
-          _showProtectedEvents: Boolean
+          _showProtectedEvents: Boolean,
+
+          _staticMethods: {
+            computed: '_computeStaticMethods(descriptor)'
+          }
         },
 
-        _anyVisible(items) {
+        _anyVisible: function(items) {
           for (var i = 0; i < (items || []).length; i++) {
             var item = items[i];
             if (!item.privacy || item.privacy === 'public' || item.privacy === 'protected') {
@@ -166,7 +170,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           return false;
         },
 
-        _public(items) {
+        _public: function(items) {
           var filtered = [];
           for (var i = 0; i < (items || []).length; i++) {
             var item = items[i];
@@ -177,7 +181,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           return filtered;
         },
 
-        _protected(items) {
+        _protected: function(items) {
           var filtered = [];
           for (var i = 0; i < (items || []).length; i++) {
             var item = items[i];
@@ -188,13 +192,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           return filtered;
         },
 
-        _protectedCount(/** arguments */) {
+        _protectedCount: function(/** arguments */) {
           var sum = 0;
           for (var i = 0; i < arguments.length; i++) {
             sum += this._protected(arguments[i]).length
           }
           return sum;
-        }
+        },
+
+        _computeStaticMethods: function(descriptor) {
+          return descriptor.staticMethods || [];
+        },
       });
     })();
   </script>
