@@ -2,7 +2,7 @@ compname=$1
 
 #--- validate command line paramters ---
 if test $# -lt 1 ; then
-	echo "Usage: testcomp.sh component-name"
+	echo "Usage: createsymlink.sh component-name"
 	exit 1
 fi
 #--- restore repos with "our" code from components.list file ---
@@ -14,5 +14,5 @@ echo $parent_path
 
 cd components
 cd $compname
-wct
+ln -s $parent_path/components /bower_components
 
