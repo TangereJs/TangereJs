@@ -12,6 +12,6 @@ parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 
 cd components
 cd $compname
-sudo ln -sf $parent_path/components /bower_components
+ln -s $parent_path/components /bower_components
 wct
 
