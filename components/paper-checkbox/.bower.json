@@ -62,11 +62,11 @@
   "resolutions": {
     "webcomponentsjs": "^1.0.0"
   },
-  "_release": "82512b7187",
+  "_release": "befe1605a5",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "82512b7187a905d2b92401ad479f2930fe8ed38b"
+    "commit": "befe1605a5f461cd8e634a6c82189e5997c91075"
   },
   "_source": "https://github.com/PolymerElements/paper-checkbox.git",
   "_target": "master",
