@@ -2,8 +2,6 @@
 
 This documents lists all elements that use z-index in any way, with reasons why and values used
 
-Last updated: 10.07.2017 (dd.mm.yyyy)
-
 
 | Element name | z-index value | Why?  |
 | ------------ | ------------- | ----- |
@@ -20,6 +18,7 @@ Last updated: 10.07.2017 (dd.mm.yyyy)
 | at-carbon-card/swipe-action | 1001 | for host element while its being swipped |
 | at-carbon-icon-button/at-carbon-icon-button | 0 | for host element |
 | at-carbon-popup/at-carbon-popup-content | 1 | for host element |
+| at-carbon-sidebar/at-carbon-sidebar | 1000 | for popup insert point that hosts the flyout |
 | at-carbon-toast/lib/iziToast.css | 1, 9999, -1 | for progressbar, wrapper and shadow |
 | at-core-cardlayout/at-core-cardlayout-desktop | 2 | for .dragging class |
 | at-core-cardlayout/at-core-cardlayout-mobile | 2 | for .dragging class |
