@@ -29,6 +29,7 @@ at-carbon-signal-button
 at-carbon-tabs
 at-carbon-time-picker
 at-carbon-toast
+at-carbon-tooltip
 at-carbon-tree
 at-carbon-video
 at-carbon-view-button
@@ -85,6 +86,7 @@ at-form-file
 at-form-html
 at-form-image
 at-form-input
+at-form-like
 at-form-lookup
 at-form-markdown
 at-form-number
