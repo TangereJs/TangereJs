@@ -7,7 +7,7 @@ if test $# -lt 1 ; then
 fi
 #--- restore repos with "our" code from components.list file ---
 echo "starting component test"
-echo TRAVIS_BUILD_DIR
+echo $TRAVIS_BUILD_DIR
 
 cd ./components
 cd ./$compname
