@@ -1,4 +1,4 @@
-compname=$1
+#compname=$1
 
 #--- validate command line paramters ---
 if test $# -lt 1 ; then
@@ -12,8 +12,9 @@ echo "starting component test"
 ls -1
 cd components
 ls -1
-cd $compname
+#cd $compname
+cd at-carbon-badge
 echo "This is sparta!"
-# cp -R ../components /bower_components
-#wct
+cp -R ../components /bower_components
+wct
 
