@@ -23,6 +23,6 @@ script:
   - cd ./components
   - cd ./at-carbon-badge
   - xvfb-run ls -1
-  - cp -R ../components /bower_components
+  - cp -R /home/travis/build/ijgithub/TangereJs/components ./bower_components
   - xvfb-run wct
 dist: trusty
