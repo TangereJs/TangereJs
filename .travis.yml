@@ -21,7 +21,7 @@ addons:
   sauce_connect: false
 script:
   - xvfb-run ls -1
-  - xvfb-run cd ./components
+  - cd ./components
   - xvfb-run ls -1
   - xvfb-run cd ./at-carbon-badge
   - xvfb-run ls -1
