@@ -9,10 +9,9 @@ fi
 echo "starting component test"
 
 
-echo $parent_path
-
 cd components
 cd $compname
-cp -R ../components /bower_components
+echo "This is sparta!"
+# cp -R ../components /bower_components
 wct
 
