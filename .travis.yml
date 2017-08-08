@@ -20,10 +20,8 @@ addons:
       - google-chrome-stable
   sauce_connect: false
 script:
-  - xvfb-run ls -1
   - cd ./components
-  - xvfb-run ls -1
-  - xvfb-run cd ./at-carbon-badge
+  - cd ./at-carbon-badge
   - xvfb-run ls -1
   - xvfb-run cp -R ../components /bower_components
   - xvfb-run wct
