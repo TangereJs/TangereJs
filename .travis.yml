@@ -20,5 +20,5 @@ addons:
       - google-chrome-stable
   sauce_connect: false
 script:
-  - xvfb-run chmod a+x ./testcomp.sh
+  - xvfb-run chmod a+x ./testcomp.sh "at-carbon-badge"
 dist: trusty
