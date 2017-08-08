@@ -9,6 +9,9 @@ fi
 echo "starting component test"
 
 cd ./components
+ls -1
 cd ./$compname
+ls -1
 ln -s /home/travis/build/ijgithub/TangereJs/components ./bower_components
+ls -1
 xvfb-run wct
