@@ -9,9 +9,11 @@ fi
 echo "starting component test"
 
 
+ls -1
 cd components
+ls -1
 cd $compname
 echo "This is sparta!"
 # cp -R ../components /bower_components
-wct
+#wct
 
