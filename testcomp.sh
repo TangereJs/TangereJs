@@ -7,11 +7,9 @@ if test $# -lt 1 ; then
 fi
 #--- restore repos with "our" code from components.list file ---
 echo "starting component test"
-echo $TRAVIS_BUILD_DIR
+echo 
 
 cd ./components
 cd ./$compname
-# main problem with travis is how to get the /home/travis/build/ijgithub/TangereJs part
-# 
-ln -s /home/travis/build/ijgithub/TangereJs/components ./bower_components
+ln -s $TRAVIS_BUILD_DIR/components ./bower_components
 xvfb-run wct
