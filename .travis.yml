@@ -20,5 +20,5 @@ addons:
       - google-chrome-stable
   sauce_connect: false
 script:
-  - chmod a+x ./testcomp.sh at-carbon-badge
+  - ./testcomp.sh at-carbon-badge
 dist: trusty
