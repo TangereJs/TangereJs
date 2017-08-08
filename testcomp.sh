@@ -8,8 +8,7 @@ fi
 #--- restore repos with "our" code from components.list file ---
 echo "starting component test"
 
-cd components
-cd $compname
-cp -R ../components /bower_components
-wct
-
+cd ./components
+cd ./$compname
+ln -s $TRAVIS_BUILD_DIR/components ./bower_components
+xvfb-run wct
