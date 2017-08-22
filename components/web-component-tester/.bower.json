@@ -40,11 +40,11 @@
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.22"
   },
   "homepage": "https://github.com/Polymer/web-component-tester",
-  "_release": "7513d34141",
+  "_release": "7ebefa637a",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "7513d3414149635f36dc6adcf9bc18321591ea85"
+    "commit": "7ebefa637a2336761581f73183287f3f2caf5902"
   },
   "_source": "https://github.com/Polymer/web-component-tester.git",
   "_target": "master",
