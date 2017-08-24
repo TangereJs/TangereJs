@@ -12,6 +12,8 @@ echo
 echo 
 echo "Starting tests for ${compname}"
 
+tangerejs_dir=$(pwd)
+
 cd ./components
 build_dir=$(pwd)
 
@@ -29,9 +31,12 @@ fi
 
 if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
   win_build_dir=$( echo $build_dir | sed 's/^\///' | sed 's/\//\\/g' | sed 's/^./\0:/' )
+  win_tangerejs_dir=$( echo $tangerejs_dir | sed 's/^\///' | sed 's/\//\\/g' | sed 's/^./\0:/' )
+  cmd <<< "copy ${win_tangerejs_dir}\wct.conf.json wct.conf.json"
   cmd <<< "mklink /D bower_components ${win_build_dir}"  
-  wct
+  wct --skip-selenium-install --configFile custom-wct.config.json
   cmd <<< "rmdir bower_components"
+  cmd <<< "del wct.conf.json"
 else
   ln -s $TRAVIS_BUILD_DIR/components ./bower_components
   xvfb-run wct
