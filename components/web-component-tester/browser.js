@@ -455,8 +455,7 @@ ChildRunner.prototype.signalRunComplete = function signalRunComplete(error) {
   this.onRunComplete = null;
 };
 
-var useNpm = document.currentScript.src.match(/wct-browser-legacy\/browser.js/) ||
-  (new URL(document.currentScript.src)).search.match(/[?&]npm=true/);
+var useNpm = document.location.search.match(/[?&]npm=true/);
 
 /**
  * The global configuration state for WCT's browser client.
@@ -474,9 +473,10 @@ var _config = {
       'lodash/index.js',
       'mocha/mocha.js',
       'chai/chai.js',
-      'sinon/lib/sinon.js',
+      '@polymer/sinonjs/sinon.js',
       'sinon-chai/lib/sinon-chai.js',
-      'accessibility-developer-tools/dist/js/axs_testing.js'
+      'accessibility-developer-tools/dist/js/axs_testing.js',
+      '@polymer/test-fixture/test-fixture.js'
     ] : [
       'stacky/browser.js',
       'async/lib/async.js',
@@ -488,12 +488,7 @@ var _config = {
       'accessibility-developer-tools/dist/js/axs_testing.js'
     ],
 
-  environmentImports: useNpm ?
-    [
-      '@polymer/test-fixture/test-fixture.html'
-    ] : [
-      'test-fixture/test-fixture.html'
-    ],
+  environmentImports: useNpm ? [] : ['test-fixture/test-fixture.html'],
 
   /** Absolute root for client scripts. Detected in `setup()` if not set. */
   root: null,
@@ -1304,7 +1299,7 @@ function _injectPrototype(klass, prototype) {
 function loadSync() {
   debug('Loading environment scripts:');
   var a11ySuite =
-    document.currentScript.src.match(/wct-browser-legacy\/browser.js/) ?
+    document.location.search.match(/[&?]npm=true/) ?
       'wct-browser-legacy/a11ySuite.js' : 'web-component-tester/data/a11ySuite.js';
   var scripts = get('environmentScripts');
   var a11ySuiteWillBeLoaded = window.__generatedByWct || scripts.indexOf(a11ySuite) > -1;

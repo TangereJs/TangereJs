@@ -59,11 +59,11 @@
     "webcomponentsjs": "^1.0.0"
   },
   "homepage": "https://github.com/PolymerElements/paper-icon-button",
-  "_release": "ace5699b57",
+  "_release": "a4eca30da9",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "ace5699b57b01ab446162a1210c3e83094c6825c"
+    "commit": "a4eca30da9f1eebcc9d5bfafaa6c23682f4f1a59"
   },
   "_source": "https://github.com/PolymerElements/paper-icon-button.git",
   "_target": "master",
