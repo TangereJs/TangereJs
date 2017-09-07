@@ -20,6 +20,6 @@ addons:
       - google-chrome-stable
   sauce_connect: false
 script:
-  - chmod a+x ./testall.sh
-  - ./testall.sh
+  - chmod a+x ./testcomp.sh
+  - ./testcomp.sh at-carbon-badge
 dist: trusty
