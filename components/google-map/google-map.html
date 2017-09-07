@@ -75,11 +75,6 @@ If you're seeing the message "You have included the Google Maps API multiple tim
         right: 0;
         bottom: 0;
         left: 0;
-        /*
-          Ensure that the div element for the map has a height. By default, div elements are created with a height of 0, and are therefore invisible. (source https://developers.google.com/maps/documentation/javascript/tutorial#Troubleshooting)
-          *ij* providing min-height for #map gives initial height to #map div so that map can be rendered
-        */
-        min-height: 500px;
       }
     </style>
 
@@ -102,10 +97,10 @@ If you're seeing the message "You have included the Google Maps API multiple tim
         selected-attribute="open"
         activate-event="google-map-marker-open"
         on-google-map-marker-close="_deselectMarker">
-      <content id="markers" select="google-map-marker"></content>
+      <slot id="markers" name="markers"></slot>
     </iron-selector>
 
-    <content id="objects" select="*"></content>
+    <slot id="objects"></slot>
   </template>
   <script>
     Polymer({

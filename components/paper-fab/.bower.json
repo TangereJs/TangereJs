@@ -58,11 +58,11 @@
   "resolutions": {
     "webcomponentsjs": "^1.0.0"
   },
-  "_release": "e94eeff063",
+  "_release": "987215b560",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "e94eeff06377979ef6a7d5e51a94e7fa7c3c5837"
+    "commit": "987215b56061a4fb0a0c2c1d696af21d1412760c"
   },
   "_source": "https://github.com/PolymerElements/paper-fab.git",
   "_target": "master",

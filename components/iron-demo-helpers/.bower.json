@@ -24,9 +24,9 @@
   "dependencies": {
     "polymer": "Polymer/polymer#1.9 - 2",
     "font-roboto": "PolymerElements/font-roboto#^1",
-    "iron-flex-layout": "polymerelements/iron-flex-layout#1 - 2",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#1 - 2",
     "iron-location": "PolymerElements/iron-location#1 - 2",
-    "marked-element": "polymerelements/marked-element#1 - 2",
+    "marked-element": "PolymerElements/marked-element#1 - 2",
     "prism-element": "PolymerElements/prism-element#1 - 2"
   },
   "devDependencies": {
@@ -42,7 +42,7 @@
         "font-roboto": "PolymerElements/font-roboto#^1",
         "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.0.0",
         "iron-location": "PolymerElements/iron-location#^0.8.0",
-        "marked-element": "polymerelements/marked-element#^1.0.0",
+        "marked-element": "PolymerElements/marked-element#^1.0.0",
         "prism-element": "PolymerElements/prism-element#^1.1.0"
       },
       "devDependencies": {
@@ -59,11 +59,11 @@
   "resolutions": {
     "webcomponentsjs": "^1.0.0"
   },
-  "_release": "ff460d296c",
+  "_release": "c48f669475",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "ff460d296c3072104273234d5f0ddec47ea69861"
+    "commit": "c48f66947597f05b3a95e928245176ac70584dbe"
   },
   "_source": "https://github.com/PolymerElements/iron-demo-helpers.git",
   "_target": "master",

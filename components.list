@@ -29,6 +29,7 @@ at-carbon-signal-button
 at-carbon-tabs
 at-carbon-time-picker
 at-carbon-toast
+at-carbon-tooltip
 at-carbon-tree
 at-carbon-video
 at-carbon-view-button
@@ -41,6 +42,7 @@ at-core-card
 at-core-cardlayout
 at-core-cardlist
 at-core-carousel
+at-core-class-toggle
 at-core-dashboard
 at-core-dframe
 at-core-dropdown
@@ -67,6 +69,7 @@ at-core-theme
 at-core-video
 at-core-view
 at-doc-demo
+at-doc-element
 at-doc-parser
 at-doc-snippet
 at-doc-viewer
@@ -85,6 +88,7 @@ at-form-file
 at-form-html
 at-form-image
 at-form-input
+at-form-like
 at-form-lookup
 at-form-markdown
 at-form-number
