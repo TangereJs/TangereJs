@@ -41,5 +41,6 @@ if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
 else
   echo "Running the LINUX branch"
   ln -s $TRAVIS_BUILD_DIR/components ./bower_components
-  xvfb-run wct
+  testresult=$( xvfb-run wct )
+  echo $testresult
 fi
