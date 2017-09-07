@@ -30,6 +30,7 @@ if [ ! -e "test/index.html" ]; then
 fi
 
 if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+  echo "Running the WINDOWS branch"
   win_build_dir=$( echo $build_dir | sed 's/^\///' | sed 's/\//\\/g' | sed 's/^./\0:/' )
   win_tangerejs_dir=$( echo $tangerejs_dir | sed 's/^\///' | sed 's/\//\\/g' | sed 's/^./\0:/' )
   cmd <<< "copy ${win_tangerejs_dir}\wct.conf.json wct.conf.json"
@@ -38,6 +39,7 @@ if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
   cmd <<< "rmdir bower_components"
   cmd <<< "del wct.conf.json"
 else
+  echo "Running the LINUX branch"
   ln -s $TRAVIS_BUILD_DIR/components ./bower_components
   xvfb-run wct
 fi
