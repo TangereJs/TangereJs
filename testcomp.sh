@@ -32,9 +32,9 @@ fi
 if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
   win_build_dir=$( echo $build_dir | sed 's/^\///' | sed 's/\//\\/g' | sed 's/^./\0:/' )
   win_tangerejs_dir=$( echo $tangerejs_dir | sed 's/^\///' | sed 's/\//\\/g' | sed 's/^./\0:/' )
-  cmd <<< "copy ${win_tangerejs_dir}\wct.conf.json wct.conf.json"
+  cmd <<< "copy ${win_tangerejs_dir}\win-wct.conf.json wct.conf.json"
   cmd <<< "mklink /D bower_components ${win_build_dir}"  
-  wct --skip-selenium-install --configFile custom-wct.config.json
+  wct --skip-selenium-install
   cmd <<< "rmdir bower_components"
   cmd <<< "del wct.conf.json"
 else
