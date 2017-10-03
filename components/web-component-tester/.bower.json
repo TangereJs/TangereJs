@@ -33,18 +33,18 @@
     "sinon-chai": "^2.7.0",
     "sinonjs": "^1.14.1",
     "stacky": "^1.3.0",
-    "test-fixture": "polymerelements/test-fixture#^3.0.0-rc.1"
+    "test-fixture": "^3.0.0"
   },
   "devDependencies": {
     "polymer": "Polymer/polymer#^1.5.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.22"
   },
   "homepage": "https://github.com/Polymer/web-component-tester",
-  "_release": "e90abbae9f",
+  "_release": "1491d7a553",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "e90abbae9fd64e5a744e98926e2e8d235d6dcd99"
+    "commit": "1491d7a5530573e2e3c79a1d2e9bbc0473484750"
   },
   "_source": "https://github.com/Polymer/web-component-tester.git",
   "_target": "master",
