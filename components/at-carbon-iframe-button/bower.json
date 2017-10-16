@@ -1,0 +1,12 @@
+{
+  "name": "at-carbon-iframe-button",
+  "version": "1.0.0.0",
+  "private": true,
+  "dependencies": {
+    "tangere": "TangereJs/tangere#master",
+    "at-carbon-button": "TangereJs/at-carbon-button#master",
+    "at-core-iframe-modal": "TangereJs/at-core-iframe-modal#master",
+    "at-theme": "TangereJs/at-theme#master",
+    "at-doc-viewer": "TangereJs/at-doc-viewer#master"
+  }
+}
