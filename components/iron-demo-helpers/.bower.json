@@ -59,11 +59,11 @@
   "resolutions": {
     "webcomponentsjs": "^1.0.0"
   },
-  "_release": "c48f669475",
+  "_release": "7e8d35581f",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "c48f66947597f05b3a95e928245176ac70584dbe"
+    "commit": "7e8d35581fae5cd1cfe9c3b7996e23b8b050d8c2"
   },
   "_source": "https://github.com/PolymerElements/iron-demo-helpers.git",
   "_target": "master",
