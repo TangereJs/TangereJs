@@ -6,10 +6,6 @@ if test $# -lt 1 ; then
   exit 1
 fi
 #--- restore repos with "our" code from components.list file ---
-echo 
-echo 
-echo 
-echo 
 echo "Starting tests for ${compname}"
 
 tangerejs_dir=$(pwd)

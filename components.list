@@ -16,6 +16,7 @@ at-carbon-empty-state
 at-carbon-icon
 at-carbon-icon-button
 at-carbon-icon-color
+at-carbon-iframe-button
 at-carbon-menu
 at-carbon-menu-button
 at-carbon-message
@@ -26,6 +27,7 @@ at-carbon-progress
 at-carbon-resolver
 at-carbon-sidebar
 at-carbon-signal-button
+at-carbon-sitemap
 at-carbon-tabs
 at-carbon-time-picker
 at-carbon-toast
@@ -49,6 +51,7 @@ at-core-dropdown
 at-core-form
 at-core-list
 at-core-iframe
+at-core-iframe-modal
 at-core-item
 at-core-markdown
 at-core-media-query
@@ -110,6 +113,7 @@ at-rule-actions
 at-rule-conditions
 at-rule-edit
 at-rule-engine
+at-silver-adaptive
 at-silver-cards
 at-silver-folder
 at-silver-form

@@ -1,0 +1,46 @@
+<link rel="import" href="../tangere/tangere.html" />
+<link rel="import" href="../at-carbon-button/at-carbon-button.html" />
+<link rel="import" href="../at-core-iframe-modal/at-core-iframe-modal.html" />
+
+<dom-module id="at-carbon-iframe-button">
+  <template>
+    <style>
+      :host {
+        display: block;
+        box-sizing: border-box;
+      }
+    </style>
+    
+    <at-carbon-button raised id="button" icon="[[icon]]" label="[[label]]" on-tap="_handleButtonOnTap"></at-carbon-button>
+    <at-core-iframe-modal id="modal" url="[[url]]"></at-core-iframe-modal>
+
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: "at-carbon-iframe-button",
+    properties: {
+      url: {
+        type: String,
+        value: ''
+      },
+
+      icon: {
+        type: String,
+        value: 'now:wrench'
+      },
+
+      label: {
+        type: String,
+        value: ''
+      }
+    },
+    ready: function () {
+
+    },
+
+    _handleButtonOnTap: function() {
+      this.$.modal.open();
+    }
+  });
+</script>

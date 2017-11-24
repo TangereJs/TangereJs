@@ -556,6 +556,9 @@ return new MouseEvent('test', { buttons: 1 }).buttons === 1;
 return false;
 }
 }();
+function isMouseEvent(name) {
+return MOUSE_EVENTS.indexOf(name) > -1;
+}
 var SUPPORTS_PASSIVE = false;
 (function () {
 try {
@@ -569,6 +572,11 @@ window.removeEventListener('test', null, opts);
 } catch (e) {
 }
 }());
+function PASSIVE_TOUCH() {
+if (HAS_NATIVE_TA && SUPPORTS_PASSIVE && Polymer.Settings.passiveTouchGestures) {
+return { passive: true };
+}
+}
 var IS_TOUCH_ONLY = navigator.userAgent.match(/iP(?:[oa]d|hone)|Android/);
 var mouseCanceller = function (mouseEvent) {
 var sc = mouseEvent.sourceCapabilities;
@@ -612,7 +620,7 @@ POINTERSTATE.mouse.mouseIgnoreJob = Polymer.Debounce(POINTERSTATE.mouse.mouseIgn
 }
 function hasLeftMouseButton(ev) {
 var type = ev.type;
-if (MOUSE_EVENTS.indexOf(type) === -1) {
+if (!isMouseEvent(type)) {
 return false;
 }
 if (type === 'mousemove') {
@@ -789,7 +797,7 @@ node[GESTURE_KEY] = gobj = {};
 }
 for (var i = 0, dep, gd; i < deps.length; i++) {
 dep = deps[i];
-if (IS_TOUCH_ONLY && MOUSE_EVENTS.indexOf(dep) > -1 && dep !== 'click') {
+if (IS_TOUCH_ONLY && isMouseEvent(dep) && dep !== 'click') {
 continue;
 }
 gd = gobj[dep];
@@ -797,7 +805,8 @@ if (!gd) {
 gobj[dep] = gd = { _count: 0 };
 }
 if (gd._count === 0) {
-node.addEventListener(dep, this.handleNative);
+var options = !isMouseEvent(dep) && PASSIVE_TOUCH();
+node.addEventListener(dep, this.handleNative, options);
 }
 gd[name] = (gd[name] || 0) + 1;
 gd._count = (gd._count || 0) + 1;
@@ -821,7 +830,8 @@ if (gd && gd[name]) {
 gd[name] = (gd[name] || 1) - 1;
 gd._count = (gd._count || 1) - 1;
 if (gd._count === 0) {
-node.removeEventListener(dep, this.handleNative);
+var options = !isMouseEvent(dep) && PASSIVE_TOUCH();
+node.removeEventListener(dep, this.handleNative, options);
 }
 }
 }
@@ -2515,7 +2525,7 @@ MIXIN_RULE: 1000
 OPEN_BRACE: '{',
 CLOSE_BRACE: '}',
 _rx: {
-comments: /\/\*[^*]*\*+([^\/*][^*]*\*+)*\//gim,
+comments: /\/\*[^*]*\*+([^/*][^*]*\*+)*\//gim,
 port: /@import[^;]*;/gim,
 customProp: /(?:^[^;\-\s}]+)?--[^;{}]*?:[^{};]*?(?:[;\n]|$)/gim,
 mixinProp: /(?:^[^;\-\s}]+)?--[^;{}]*?:[^{};]*?{[^}]*?}(?:[;\n]|$)?/gim,
@@ -2829,6 +2839,7 @@ var self = this;
 cb = function (rule) {
 rule.selector = self._slottedToContent(rule.selector);
 rule.selector = rule.selector.replace(ROOT, ':host > *');
+rule.selector = self._dirShadowTransform(rule.selector);
 if (callback) {
 callback(rule);
 }
@@ -2924,6 +2935,7 @@ if (jumpIndex >= 0) {
 selector = selector.replace(SCOPE_JUMP, ' ');
 stop = true;
 }
+selector = selector.replace(DIR_PAREN, DIR_REPLACE);
 return {
 value: selector,
 combinator: combinator,
@@ -2972,10 +2984,17 @@ return !part.match(HOST_OR_HOST_GT_STAR);
 rule.selector = parts.join(COMPLEX_SELECTOR_SEP);
 },
 _transformDocumentSelector: function (selector) {
-return selector.match(SCOPE_JUMP) ? this._transformComplexSelector(selector, SCOPE_DOC_SELECTOR) : this._transformSimpleSelector(selector.trim(), SCOPE_DOC_SELECTOR);
+return this._transformComplexSelector(selector, SCOPE_DOC_SELECTOR);
 },
 _slottedToContent: function (cssText) {
 return cssText.replace(SLOTTED_PAREN, CONTENT + '> $1');
+},
+_dirShadowTransform: function (selector) {
+return selector.split(',').map(function (s) {
+s = s.replace(HOST_DIR, HOST_DIR_REPLACE);
+s = s.replace(DIR_PAREN, SHADOW_DIR_REPLACE);
+return s;
+}).join(',');
 },
 SCOPE_NAME: 'style-scope'
 };
@@ -3000,6 +3019,11 @@ var CONTENT_START = new RegExp('^(' + CONTENT + ')');
 var SELECTOR_NO_MATCH = 'should_not_match';
 var SLOTTED_PAREN = /(?:::slotted)(?:\(((?:\([^)(]*\)|[^)(]*)+?)\))/g;
 var HOST_OR_HOST_GT_STAR = /:host(?:\s*>\s*\*)?/;
+var DIR_PAREN = /(.*):dir\((ltr|rtl)\)/g;
+var DIR_REPLACE = '[dir="$2"] $1, $1[dir="$2"]';
+var SHADOW_DIR_REPLACE = ':host-context([dir="$2"]) $1';
+var HOST_DIR = /:host\(:dir\((rtl|ltr)\)\)/g;
+var HOST_DIR_REPLACE = ':host-context([dir="$1"])';
 return api;
 }();Polymer.StyleExtends = function () {
 var styleUtil = Polymer.StyleUtil;
@@ -4135,6 +4159,9 @@ this.__appliedElement = this.__appliedElement || this;
 this.__cssBuild = styleUtil.getCssBuildType(this);
 if (this.__appliedElement !== this) {
 this.__appliedElement.__cssBuild = this.__cssBuild;
+}
+if (this.ownerDocument !== window.document && this.__appliedElement === this) {
+document.head.appendChild(this);
 }
 this._tryApply();
 },
