@@ -43,7 +43,7 @@ if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
   cmd <<< "del wct.conf.json"
 else
   ln -s $TRAVIS_BUILD_DIR/components ./bower_components
-  xvfb-run wct
+  xvfb-run -a wct
   result=$?
   if [ $result -eq 0 ]; then
     echo "${compname}" >> ${tangerejs_dir}/tests_success.log
