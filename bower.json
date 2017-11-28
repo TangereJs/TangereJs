@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "polymer": "Polymer/polymer#master",
+    "async": "caolan/async#^2.6.0",
     "iron-elements": "PolymerElements/iron-elements#master",
     "paper-elements": "PolymerElements/paper-elements#master",
     "font-roboto-local": "PolymerElements/font-roboto-local#master",
@@ -12,6 +13,7 @@
     "iron-form": "PolymerElements/iron-form#^1.0.0"
   },
   "resolutions": {
+    "async": "^2.6.0",
     "polymer": "^1.0.0",
     "paper-input": "master",
     "core-ajax": "master",
