@@ -80,11 +80,11 @@
   "resolutions": {
     "webcomponentsjs": "^1.0.0"
   },
-  "_release": "e5d116e7ff",
+  "_release": "f64825d59d",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "e5d116e7ffa1065a075c0b10e636061cdfd8463b"
+    "commit": "f64825d59dda77bc9808c244ca15dd11649d1512"
   },
   "_source": "https://github.com/PolymerElements/paper-input.git",
   "_target": "master",
