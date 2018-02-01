@@ -14,14 +14,13 @@
     "url": "git://github.com/PolymerElements/iron-elements.git"
   },
   "dependencies": {
-    "icon-behaviors-collection": "PolymerElements/iron-behaviors-collection",
-    "icon-input-elements": "PolymerElements/iron-input-elements",
     "iron-a11y-announcer": "PolymerElements/iron-a11y-announcer",
     "iron-a11y-keys": "PolymerElements/iron-a11y-keys",
     "iron-a11y-keys-behavior": "PolymerElements/iron-a11y-keys-behavior",
     "iron-ajax": "PolymerElements/iron-ajax",
     "iron-autogrow-textarea": "PolymerElements/iron-autogrow-textarea",
     "iron-behaviors": "PolymerElements/iron-behaviors",
+    "iron-behaviors-collection": "PolymerElements/iron-behaviors-collection",
     "iron-collapse": "PolymerElements/iron-collapse",
     "iron-component-page": "PolymerElements/iron-component-page",
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers",
@@ -33,6 +32,7 @@
     "iron-icons": "PolymerElements/iron-icons",
     "iron-iconset": "PolymerElements/iron-iconset",
     "iron-iconset-svg": "PolymerElements/iron-iconset-svg",
+    "iron-input-elements": "PolymerElements/iron-input-elements",
     "iron-image": "PolymerElements/iron-image",
     "iron-jsonp-library": "PolymerElements/iron-jsonp-library",
     "iron-list": "PolymerElements/iron-list",
@@ -56,11 +56,11 @@
     "tests"
   ],
   "main": "iron-elements.html",
-  "_release": "ff42faedcf",
+  "_release": "a3c50dac82",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "ff42faedcfe8247ac52dbef0b77edf9fbc142f81"
+    "commit": "a3c50dac82644cb92970369de1e9841a479f7572"
   },
   "_source": "https://github.com/PolymerElements/iron-elements.git",
   "_target": "master",

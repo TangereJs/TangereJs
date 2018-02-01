@@ -55,11 +55,11 @@
   "resolutions": {
     "webcomponentsjs": "^1.0.0"
   },
-  "_release": "8d999f711c",
+  "_release": "70e1b8d12e",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "8d999f711c42366c7f81247eddbd11882b473533"
+    "commit": "70e1b8d12e4a1f2341f2dabb5c7382661b598d10"
   },
   "_source": "https://github.com/PolymerElements/iron-icons.git",
   "_target": "master",

@@ -50,11 +50,11 @@
   "resolutions": {
     "webcomponentsjs": "^1.0.0"
   },
-  "_release": "e4b68af74a",
+  "_release": "a805b8dd39",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "e4b68af74a36084456bc10db35252c01b2f7ad4d"
+    "commit": "a805b8dd39cd30631f218298fd5315c4d93d1daa"
   },
   "_source": "https://github.com/PolymerElements/iron-collapse.git",
   "_target": "master",
