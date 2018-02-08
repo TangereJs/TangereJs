@@ -21,11 +21,11 @@
     "generate-style.js",
     "demo.html"
   ],
-  "_release": "85672808b9",
+  "_release": "a39d4086a4",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "85672808b98bb77c09f28ac662a656de1d2f2988"
+    "commit": "a39d4086a41ad98d08d6c83947cf0feafb3b5a91"
   },
   "_source": "https://github.com/PolymerElements/font-roboto-local.git",
   "_target": "master",
