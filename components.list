@@ -84,6 +84,7 @@ at-form-ajax
 at-form-array
 at-form-behaviors
 at-form-checkbox
+at-form-checkbox-list
 at-form-codemirror
 at-form-complex
 at-form-cron
