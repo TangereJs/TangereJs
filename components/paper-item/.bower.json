@@ -68,11 +68,11 @@
   "resolutions": {
     "webcomponentsjs": "^1.0.0"
   },
-  "_release": "94fd7f6833",
+  "_release": "3738a8c2b6",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "94fd7f683333a38939cd992c4739ba2cc50c1642"
+    "commit": "3738a8c2b6d526272a86e153fe8fd1fe8504886e"
   },
   "_source": "https://github.com/PolymerElements/paper-item.git",
   "_target": "master",
