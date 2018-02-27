@@ -35,6 +35,6 @@
     "commit": "ec0afd727a0af36509264a78b691484123dc7bf6"
   },
   "_source": "https://github.com/PolymerElements/iron-meta.git",
-  "_target": "1 - 2",
+  "_target": "^1.0.0",
   "_originalSource": "PolymerElements/iron-meta"
 }
