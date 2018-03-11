@@ -22,8 +22,8 @@
     "iron-meta": "PolymerElements/iron-meta#1 - 2"
   },
   "devDependencies": {
-    "paper-styles": "PolymerElements/paper-styles#1 - 2",
     "iron-component-page": "polymerelements/iron-component-page#1 - 2",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#1 - 2",
     "iron-icon": "PolymerElements/iron-icon#1 - 2",
     "promise-polyfill": "polymerlabs/promise-polyfill#1 - 2",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
@@ -36,8 +36,8 @@
         "iron-meta": "polymerelements/iron-meta#^1.0.0"
       },
       "devDependencies": {
-        "paper-styles": "polymerelements/paper-styles#^1.0.2",
         "iron-component-page": "polymerelements/iron-component-page#^1.0.0",
+        "iron-demo-helpers": "PolymerElements/iron-demo-helpers#1 - 2",
         "iron-icon": "polymerelements/iron-icon#^1.0.0",
         "promise-polyfill": "polymerlabs/promise-polyfill#^1.0.0",
         "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
@@ -52,11 +52,11 @@
     "webcomponentsjs": "^1.0.0"
   },
   "homepage": "https://github.com/polymerelements/iron-iconset-svg",
-  "_release": "bb78b4da81",
+  "_release": "a11da479ac",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "bb78b4da81e0e48621008e43bf2fd0ebce012c8b"
+    "commit": "a11da479ac4e23af2ffdf0bdf4cfe8591a10caf1"
   },
   "_source": "https://github.com/polymerelements/iron-iconset-svg.git",
   "_target": "master",

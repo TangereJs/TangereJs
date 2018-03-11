@@ -57,11 +57,11 @@
   "resolutions": {
     "webcomponentsjs": "^1.0.0"
   },
-  "_release": "0d87ce662f",
+  "_release": "efd4e6bf7b",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "0d87ce662f6d86b0343cd929ab9f503dc126c764"
+    "commit": "efd4e6bf7bf7b4a2f29a58bf25110c7277eab75c"
   },
   "_source": "https://github.com/PolymerElements/paper-radio-group.git",
   "_target": "master",

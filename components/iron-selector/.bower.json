@@ -55,11 +55,11 @@
   "resolutions": {
     "webcomponentsjs": "^1.0.0"
   },
-  "_release": "82e8bf6bd3",
+  "_release": "d3b9137b80",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "82e8bf6bd3c3bf5a3605271e8ef1ee2cb68f053c"
+    "commit": "d3b9137b80b52a3fb1a8edd899d66ffada181f58"
   },
   "_source": "https://github.com/PolymerElements/iron-selector.git",
   "_target": "master",
