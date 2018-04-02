@@ -102,6 +102,7 @@ at-form-markdown
 at-form-modal
 at-form-number
 at-form-password
+at-form-picker
 at-form-radio
 at-form-random
 at-form-rule-edit
