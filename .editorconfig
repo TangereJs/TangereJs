@@ -11,6 +11,9 @@ indent_style = space
 indent_size = 2
 
 
+[components.list]
+end_of_line = lf
+
 # C#
 [*.cs]
 indent_style = space
