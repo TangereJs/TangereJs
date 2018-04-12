@@ -23,7 +23,7 @@ This documents lists all elements that use z-index in any way, with reasons why 
 | at-core-cardlayout/at-core-cardlayout-desktop | 2 | for .dragging class |
 | at-core-cardlayout/at-core-cardlayout-mobile | 2 | for .dragging class |
 | at-core-dframe/styles/devices-styles | 900, 1, 2, 3, 0, 999, 5 | for various phone elements that are displayed on screen |
-| at-core-dropdown/at-core-dropdown-impl | -1, 999, 2 | for container, outline, content and mask |
+| at-core-dropdown/at-core-dropdown-impl | -1, 1999, 2 | for container, outline, content and mask |
 | at-core-mic/at-core-mic | 10 | for container when recognizing |
 | at-core-modal/styles/at-core-modal-styles | 1000 | for overlay and contents |
 | at-core-pdf/web/viewer html and css | -1, 200, 9999, 10000, 30000, 199, 99, 4000, 50000, 100, 9999999 | for various elements on screen |
