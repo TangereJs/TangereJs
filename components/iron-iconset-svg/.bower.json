@@ -52,11 +52,11 @@
     "webcomponentsjs": "^1.0.0"
   },
   "homepage": "https://github.com/polymerelements/iron-iconset-svg",
-  "_release": "1f0a6ee33d",
+  "_release": "65b04ec3aa",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "1f0a6ee33dec6b235d1c52bbec1a2f725e23a309"
+    "commit": "65b04ec3aaeb46efa11be109aa41ea0c6d327a32"
   },
   "_source": "https://github.com/polymerelements/iron-iconset-svg.git",
   "_target": "master",
