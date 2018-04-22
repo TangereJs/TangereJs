@@ -1258,15 +1258,15 @@ Liquid.Template.registerFilter({
   },
 
   downcase: function(input) {
-    return input.toString().toLowerCase();
+    return (input||'').toString().toLowerCase();
   },
 
   upcase: function(input) {
-    return input.toString().toUpperCase();
+    return (input||'').toString().toUpperCase();
   },
 
   capitalize: function(input) {
-    return input.toString().capitalize();
+    return (input||'').toString().capitalize();
   },
 
   escape: function(input) {
@@ -1298,7 +1298,7 @@ Liquid.Template.registerFilter({
     if(!input || input == ''){ return ''; }
     words = parseInt(words || 15);
     string = string || '...';
-    var wordlist = input.toString().split(" "),
+    var wordlist = (input||'').toString().split(" "),
         l = Math.max((words), 0);
     return (wordlist.length > l) ? wordlist.slice(0,l).join(' ') + string : input;
   },
@@ -1307,17 +1307,17 @@ Liquid.Template.registerFilter({
     if(!input || input == ''){ return ''; }
     words = parseInt(words || 15);
     string = string || '...';
-    var wordlist = input.toString().split(" "),
+    var wordlist = (input||'').toString().split(" "),
         l = Math.max((words), 0);
     return (wordlist.length > l) ? wordlist.slice(0,l).join(' ') + string : input;
   },
 
   strip_html: function(input) {
-    return input.toString().replace(/<.*?>/g, '');
+    return (input||'').toString().replace(/<.*?>/g, '');
   },
 
   strip_newlines: function(input) {
-    return input.toString().replace(/\n/g, '')
+    return (input||'').toString().replace(/\n/g, '')
   },
 
   join: function(input, separator) {
@@ -1340,16 +1340,16 @@ Liquid.Template.registerFilter({
 
   replace: function(input, string, replacement) {
     replacement = replacement || '';
-    return input.toString().replace(new RegExp(string, 'g'), replacement);
+    return (input||'').toString().replace(new RegExp(string, 'g'), replacement);
   },
 
   replace_first: function(input, string, replacement) {
     replacement = replacement || '';
-    return input.toString().replace(new RegExp(string, ""), replacement);
+    return (input||'').toString().replace(new RegExp(string, ""), replacement);
   },
 
   newline_to_br: function(input) {
-    return input.toString().replace(/\n/g, "<br/>\n");
+    return (input||'').toString().replace(/\n/g, "<br/>\n");
   },
 
   date: function(input, format) {
@@ -1407,11 +1407,11 @@ Liquid.Template.registerFilter({
   },
 
   remove: function(input, string) {
-    return input.toString().replace(new RegExp(string, 'g'), '');
+    return (input||'').toString().replace(new RegExp(string, 'g'), '');
   },
 
   remove_first: function(input, string) {
-    return input.toString().replace(string, '');
+    return (input||'').toString().replace(string, '');
   },
 
   prepend: function(input, string) {

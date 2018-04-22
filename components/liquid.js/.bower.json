@@ -1,11 +1,11 @@
 {
   "name": "liquid.js",
   "homepage": "https://github.com/TangereJs/liquid.js",
-  "_release": "bafc0c9e7e",
+  "_release": "4bdb849549",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "bafc0c9e7e53b09b79d2f290bec4e6f597e7a244"
+    "commit": "4bdb849549ef8c4c1afc1c5049513cff3b14b892"
   },
   "_source": "https://github.com/TangereJs/liquid.js.git",
   "_target": "master",
