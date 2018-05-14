@@ -11,7 +11,8 @@
   ],
   "main": [
     "demo-snippet.html",
-    "url-bar.html"
+    "url-bar.html",
+    "demo-pages-shared-styles.html"
   ],
   "private": true,
   "repository": {
@@ -59,11 +60,11 @@
   "resolutions": {
     "webcomponentsjs": "^1.0.0"
   },
-  "_release": "0136908426",
+  "_release": "5d90090edd",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "0136908426423d1e4a85d5c87a55234ac3848579"
+    "commit": "5d90090edd6416202a87bb87cd4b882eec7973ba"
   },
   "_source": "https://github.com/PolymerElements/iron-demo-helpers.git",
   "_target": "master",

@@ -9,7 +9,10 @@
     "polymer",
     "icon"
   ],
-  "main": "iron-icons.html",
+  "main": [
+    "iron-icons.html",
+    "av-icons.html"
+  ],
   "private": true,
   "repository": {
     "type": "git",
@@ -73,11 +76,11 @@
     "util",
     "update-icons.sh"
   ],
-  "_release": "f02d917252",
+  "_release": "17214f53d4",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "f02d9172523729530209b549c94aa89cde7c3ba6"
+    "commit": "17214f53d4d8990318bf716776cbbab2f7902401"
   },
   "_source": "https://github.com/PolymerElements/iron-icons.git",
   "_target": "master",

@@ -1,6 +1,6 @@
 <!--
 @license
-Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
@@ -13,18 +13,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../prism-element/prism-highlighter.html">
 <link rel="import" href="../prism-element/prism-theme-default.html">
 
+<link rel="import" href="iron-doc-behavior.html">
+<link rel="import" href="iron-doc-element.html">
+<link rel="import" href="iron-doc-class.html">
 <link rel="import" href="iron-doc-function.html">
+<link rel="import" href="iron-doc-mixin.html">
 <link rel="import" href="iron-doc-summary.html">
 <link rel="import" href="iron-doc-viewer-behavior.html">
 <link rel="import" href="iron-doc-viewer-styles.html">
 
-<!--
-`iron-doc-namespace` renders documentation about a JavaScript namespace from a
-JSON descriptor output by
-[Polymer Analyzer](https://github.com/Polymer/polymer-analyzer).
--->
-
-<dom-module id="iron-doc-namespace">
+<dom-module id="iron-doc-module">
   <template>
     <style include="iron-doc-viewer-styles prism-theme-default">
       :host {
@@ -33,6 +31,10 @@ JSON descriptor output by
     </style>
 
     <prism-highlighter></prism-highlighter>
+
+    <template is="dom-if" if="[[moduleSpecifier]]">
+      <code>import {} from '[[moduleSpecifier]]';</code>
+    </template>
 
     <h1>[[title]]</h1>
     <p hidden$="[[!descriptor.summary]]">[[descriptor.summary]]</p>
@@ -50,56 +52,44 @@ JSON descriptor output by
 
     <section anchor-id$="[[fragmentPrefix]]elements"
              hidden$="[[_noneToShow(_showProtected,_showInherited,descriptor,'elements')]]">
-      <h2>
-        <a href$="#[[fragmentPrefix]]elements" class="deeplink">Elements</a>
-      </h2>
       <template is="dom-repeat" items="[[descriptor.elements]]" sort="_compareDescriptors">
-        <iron-doc-summary
-          name="[[_getElementName(item)]]"
-          description="[[item.summary]]"
-          href="[[baseHref]]/elements/[[_getElementId(item)]]">
-        </iron-doc-summary>
+        <iron-doc-element
+            descriptor="[[item]]"
+            anchor-id$="[[fragmentPrefix]][[item.name]]"
+            fragment-prefix="[[fragmentPrefix]][[item.name]]-">
+        </iron-doc-element>
       </template>
     </section>
 
     <section anchor-id$="[[fragmentPrefix]]classes"
              hidden$="[[_noneToShow(_showProtected,_showInherited,descriptor,'classes')]]">
-      <h2>
-        <a href$="#[[fragmentPrefix]]classes" class="deeplink">Classes</a>
-      </h2>
       <template is="dom-repeat" items="[[descriptor.classes]]" sort="_compareDescriptors">
-        <iron-doc-summary
-          name="[[item.name]]"
-          description="[[item.summary]]"
-          href="[[baseHref]]/classes/[[_getElementId(item)]]">
+        <iron-doc-class
+          descriptor="{{item}}"
+          anchor-id$="[[fragmentPrefix]][[item.name]]"
+          fragment-prefix="[[fragmentPrefix]][[item.name]]-">
         </iron-doc-summary>
       </template>
     </section>
 
     <section anchor-id$="[[fragmentPrefix]]mixins"
              hidden$="[[_noneToShow(_showProtected,_showInherited,descriptor,'mixins')]]">
-      <h2>
-        <a href$="#[[fragmentPrefix]]mixins" class="deeplink">Mixins</a>
-      </h2>
       <template is="dom-repeat" items="[[descriptor.mixins]]" sort="_compareDescriptors">
-        <iron-doc-summary
-          name="[[item.name]]"
-          description="[[item.summary]]"
-          href="[[baseHref]]/mixins/[[item.name]]">
-        </iron-doc-summary>
+        <iron-doc-mixin
+            descriptor="[[item]]"
+	    anchor-id$="[[fragmentPrefix]][[item.name]]"
+            fragment-prefix="[[fragmentPrefix]][[item.name]]-">
+        </iron-doc-mixin>
       </template>
     </section>
 
     <section anchor-id$="[[fragmentPrefix]]behaviors"
              hidden$="[[_noneToShow(_showProtected,_showInherited,descriptor,'behaviors')]]">
-      <h2>
-        <a href$="#[[fragmentPrefix]]behaviors" class="deeplink">Behaviors</a>
-      </h2>
       <template is="dom-repeat" items="[[_getPolymerBehaviors(descriptor)]]" sort="_compareDescriptors">
-        <iron-doc-summary
-          name="[[item.name]]"
-          description="[[item.summary]]"
-          href="[[baseHref]]/behaviors/[[item.name]]">
+        <iron-doc-behavior
+          descriptor="[[item]]"
+          anchor-id$="[[fragmentPrefix]][[item.name]]"
+          fragment-prefix="[[fragmentPrefix]][[item.name]]-">
         </iron-doc-summary>
       </template>
     </section>
@@ -107,47 +97,43 @@ JSON descriptor output by
     <section anchor-id$="[[fragmentPrefix]]functions"
              hidden$="[[_noneToShow(_showProtected,_showInherited,descriptor,'functions')]]">
       <h2>
-        <a href$="#[[fragmentPrefix]]functions" class="deeplink">Functions</a>
+        <a href$="#[[fragmentPrefix]]functions" class="deeplink">
+          Exported Functions
+        </a>
       </h2>
       <template is="dom-repeat" items="[[descriptor.functions]]" sort="_compareDescriptors">
         <iron-doc-function
-            add-import-path
-            anchor-id="[[fragmentPrefix]]function-[[item.name]]"
+            anchor-id$="[[fragmentPrefix]][[item.name]]"
             descriptor="[[item]]">
         </iron-doc-function>
       </template>
-    </section>
-
-    <section anchor-id$="[[fragmentPrefix]]namespaces"
-             hidden$="[[_noneToShow(_showProtected,_showInherited,descriptor,'namespaces')]]">
-      <h2>
-        <a href$="#[[fragmentPrefix]]namespaces" class="deeplink">Namespaces</a>
-      </h2>
-      <div hidden$="[[!descriptor.namespaces.length]]">
-        <template is="dom-repeat" items="[[descriptor.namespaces]]" sort="_compareDescriptors">
-          <iron-doc-summary
-            name="[[item.name]]"
-            description="[[item.summary]]"
-            href="[[baseHref]]/namespaces/[[item.name]]">
-          </iron-doc-summary>
-        </template>
-      </div>
     </section>
 
   </template>
 
   <script>
     (function() {
+    /**
+     * `iron-doc-module` renders documentation about a JavaScript Module from a
+     * JSON descriptor output by
+     * [Polymer Analyzer](https://github.com/Polymer/polymer-analyzer).
+     *
+     * The descriptor should be an analysis format Analysis object, filtered
+     * down to contain only the exported contents of a single module.
+     */
     Polymer({
-      is: 'iron-doc-namespace',
+      is: 'iron-doc-module',
 
       behaviors: [Polymer.IronDocViewerBehavior],
 
-      properties: {title: {computed: '_computeTitle(descriptor)', notify: true}},
-
-      _computeTitle: function(descriptor) {
-        return descriptor && 'Namespace ' + (descriptor.name || 'global');
-      }
+      properties: {
+        /**
+         * The module specifier of this module, used to give an example of
+         * how to import it. So if this is 'foo' we will tell users to do:
+         * `import {} from 'foo';`
+         */
+        moduleSpecifier: String,
+      },
     });
     })();
   </script>
