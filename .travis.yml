@@ -3,7 +3,7 @@ sudo: required
 before_script:
   - npm install -g bower
   - bower install
-  - npm install -g web-component-tester
+  - npm install -g web-component-tester@6.5.0
 env:
   global:
     - secure: >-
