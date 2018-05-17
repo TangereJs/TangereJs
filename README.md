@@ -52,3 +52,4 @@ After the script is finished all at- components contain complete the git repos. 
 5) Click on the repository of your choice
 6) Click **build** on the panel on the right
 
+Trigger travis-ci build
