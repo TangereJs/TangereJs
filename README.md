@@ -67,3 +67,37 @@ Trigger travis-ci build
 10. Download [selenium-server-standalone-3.12.0](http://selenium-release.storage.googleapis.com/3.12/selenium-server-standalone-3.12.0.jar), copy it to folder from **`7.`**
 11. rename it to `3.8.1-server` because version `3.8.1` is declared in `default-config.js`
 12. testing in IE11 now works
+
+#### How to enable testing in Edge on localhost
+1. add internet explorer to [win-wct.conf.json](https://github.com/TangereJs/TangereJs/blob/master/win-wct.conf.json#L5) as `'edge'`
+2. open the `%AppData%\Roaming\npm\node_modules\web-component-tester\node_modules\wct-local\lib\browsers.js`
+3. Note the `LAUNCHPAD_TO_SELENIUM` variable on Line 22
+4. add entry for `edge` as `edge: edge`
+5. `LAUNCHPAD_TO_SELENIUM` should now look like this
+```javascript
+const LAUNCHPAD_TO_SELENIUM = {
+    chrome: chrome,
+    canary: chrome,
+    firefox: firefox,
+    aurora: firefox,
+    ie: internetExplorer,
+    safari: safari,
+    edge: edge // this one was added
+};
+```
+6. Find the `// Launchpad -> Selenium` comment
+7. Add following code bellow that line
+```javascript
+function edge(browser, browserOptions) {
+    return {
+        'browserName': 'MicrosoftEdge',
+        'version': browser.version
+    };
+}
+```
+8. I do not quite understand why browser name has to be `MicrosoftEdge` instead of just `edge` but there you have it
+9. note the `%AppData%\Roaming\npm\node_modules\web-component-tester\node_modules\selenium-standalone\.selenium\edgedriver`
+10. note the version of EdgeHTML of you edge browser. For me it was Microsoft EdgeHTML 16.16299
+11. My edge driver was 16299-MicrosoftEdgeDriver.exe, so the version of edgeHTML (.16299) and driver version (16299) should match
+12. If edgeHtml version and driver versions do not match download and install a matching version from https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+13. testing on Edge now works
