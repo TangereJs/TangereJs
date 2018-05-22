@@ -53,3 +53,17 @@ After the script is finished all at- components contain complete the git repos. 
 6) Click **build** on the panel on the right
 
 Trigger travis-ci build
+
+#### How to enable testing in IE11 on localhost
+1. add internet explorer to [win-wct.conf.json](https://github.com/TangereJs/TangereJs/blob/master/win-wct.conf.json#L5) as `'ie'`
+2. note the `%AppData%\Roaming\npm\node_modules\web-component-tester\node_modules\selenium-standalone\.selenium\iedriver`
+3. also note the `%AppData%\Roaming\npm\node_modules\web-component-tester\node_modules\selenium-standalone\lib\default-config.js`
+4. the `default-config.js` file declares that ie driver version of 3.9.0 should be installed and used. This version doesn't work on windows 10 and IE11. 
+5. version [3.11.1-x64-IEDriverServer.zip](http://selenium-release.storage.googleapis.com/3.11/IEDriverServer_x64_3.11.1.zip) works
+6. download the zip file, extract zip, copy `IEDriverServer.exe` to `iedriver` folder from **`2.`**, and rename to `3.9.0-x64-IEDriverServer.exe`
+7. the rename is required because version `3.9.0` is declared in `default-config.js`
+8. note the `%AppData%\Roaming\npm\node_modules\web-component-tester\node_modules\selenium-standalone\.selenium\selenium-server`
+9. The installed version is `3.8.1`. This version doesn't work with `ie driver v3.11.1`
+10. Download [selenium-server-standalone-3.12.0](http://selenium-release.storage.googleapis.com/3.12/selenium-server-standalone-3.12.0.jar), copy it to folder from **`7.`**
+11. rename it to `3.8.1-server` because version `3.8.1` is declared in `default-config.js`
+12. testing in IE11 now works
