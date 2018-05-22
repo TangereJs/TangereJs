@@ -1,5 +1,9 @@
 compname=$1
 
+startdate=$(date +%x_%H:%M:%S:%N)
+echo "${compname} testing started at ${startdate}";
+
+
 #--- validate command line paramters ---
 if test $# -lt 1 ; then
   echo "Usage: testcomp.sh component-name"
@@ -51,3 +55,6 @@ else
     echo "${compname}" >> ${tangerejs_dir}/tests_failure.log
   fi
 fi
+
+enddate=$(date +%x_%H:%M:%S:%N)
+echo "${compname} testing ended at ${enddate}";

@@ -1,3 +1,6 @@
+startdate=$(date +%x_%H:%M:%S:%N)
+echo "TangereJs testing started at ${startdate}";
+
 rm tests_missing.log
 rm tests_failure.log
 rm tests_success.log
@@ -20,3 +23,6 @@ cat tests_success.log
 echo
 echo "######## Failed tests ########"
 cat tests_failure.log
+
+startdate=$(date +%x_%H:%M:%S:%N)
+echo "TangereJs testing ended at ${startdate}";
