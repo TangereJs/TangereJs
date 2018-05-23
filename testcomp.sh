@@ -62,4 +62,4 @@ else
   fi
 fi
 totalms=`expr $enddatems - $startdatems`
-echo "${compname};${totalms};${testresult}" >> ${tangerejs_dir}/tests_csv.log
+echo "${compname},${totalms},${testresult}" >> ${tangerejs_dir}/tests_csv.log
