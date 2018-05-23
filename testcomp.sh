@@ -61,5 +61,5 @@ else
     echo "${compname}" >> ${tangerejs_dir}/tests_failure.log
   fi
 fi
-totalms=`expr $enddatems - $startdatems`
+totalms=$(expr $enddatems - $startdatems)
 echo "${compname},${totalms},${testresult}" >> ${tangerejs_dir}/tests_csv.log
