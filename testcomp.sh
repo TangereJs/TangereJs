@@ -55,13 +55,16 @@ else
   ln -s $TRAVIS_BUILD_DIR/components ./bower_components
   xvfb-run -a wct --skip-selenium-install --skip-update-check --color --skip-plugin BABEL --compile never
   result=$?
+
+  enddatems=$(($(date +%s%N)/1000000))
   if [ $result -eq 0 ]; then
+    testresult="success"
     echo "${compname}" >> ${tangerejs_dir}/tests_success.log
   else 
+    testresult="failure"
     echo "${compname}" >> ${tangerejs_dir}/tests_failure.log
   fi
 fi
-echo "startdatems ${startdatems}"
-echo "enddatems ${enddatems}"
 totalms=$(expr $enddatems - $startdatems)
+echo "Tests executed in ${totalms} milliseconds"
 echo "${compname},${totalms},${testresult}" >> ${tangerejs_dir}/tests_csv.log

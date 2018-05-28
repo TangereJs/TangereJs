@@ -25,9 +25,5 @@ echo
 echo "######## Failed tests ########"
 cat tests_failure.log
 
-echo
-echo "######## All tests with duration in ms ########"
-cat tests_csv.log
-
 startdate=$(date +%x_%H:%M:%S:%N)
 echo "TangereJs testing ended at ${startdate}";
