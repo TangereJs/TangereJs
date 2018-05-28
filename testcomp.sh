@@ -43,10 +43,10 @@ if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
   enddatems=$(($(date +%s%N)/1000000))
 
   if [ $result -eq 0 ]; then
-    testresult="success";
+    testresult="success"
     echo "${compname}" >> ${tangerejs_dir}/tests_success.log
   else 
-    testresult="failure";
+    testresult="failure"
     echo "${compname}" >> ${tangerejs_dir}/tests_failure.log
   fi
   cmd <<< "rmdir bower_components"
@@ -61,5 +61,7 @@ else
     echo "${compname}" >> ${tangerejs_dir}/tests_failure.log
   fi
 fi
+echo "startdatems ${startdatems}"
+echo "enddatems ${enddatems}"
 totalms=$(expr $enddatems - $startdatems)
 echo "${compname},${totalms},${testresult}" >> ${tangerejs_dir}/tests_csv.log
