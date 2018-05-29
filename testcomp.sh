@@ -32,6 +32,8 @@ if [ ! -e "test/index.html" ]; then
   exit 0
 fi
 
+script_result=0
+
 if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
   win_build_dir=$( echo $build_dir | sed 's/^\///' | sed 's/\//\\/g' | sed 's/^./\0:/' )
   win_tangerejs_dir=$( echo $tangerejs_dir | sed 's/^\///' | sed 's/\//\\/g' | sed 's/^./\0:/' )
@@ -47,6 +49,7 @@ if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
     echo "${compname}" >> ${tangerejs_dir}/tests_success.log
   else 
     testresult="failure"
+    script_result=1
     echo "${compname}" >> ${tangerejs_dir}/tests_failure.log
   fi
   cmd <<< "rmdir bower_components"
@@ -62,9 +65,11 @@ else
     echo "${compname}" >> ${tangerejs_dir}/tests_success.log
   else 
     testresult="failure"
+    script_result=1
     echo "${compname}" >> ${tangerejs_dir}/tests_failure.log
   fi
 fi
 totalms=$(expr $enddatems - $startdatems)
 echo "Tests executed in ${totalms} milliseconds"
 echo "${compname},${totalms},${testresult}" >> ${tangerejs_dir}/tests_csv.log
+exit $script_result

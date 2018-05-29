@@ -6,10 +6,14 @@ rm tests_failure.log
 rm tests_success.log
 rm tests_csv.log
 
+total_result=0
+
 while read line
 do
   if [[ $line ]]; then
     bash testcomp.sh $line
+    tmpresult=$?
+    total_result=$(expr $total_result + $tmpresult)
   fi
 done < components.list
 
@@ -27,3 +31,5 @@ cat tests_failure.log
 
 startdate=$(date +%x_%H:%M:%S:%N)
 echo "TangereJs testing ended at ${startdate}";
+
+exit $total_result
