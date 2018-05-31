@@ -28,3 +28,19 @@ Dependencies that have to be upgraded
   }
 }
 ```
+
+### at-carbon-tabs migration to Polymer 2.x
+Element structure
+- replace `<content>` with `<slot>`
+- replace `::content` selector with `::slotted` selector
+
+Dependencies to be upgraded
+- `at-core-style-classes`
+  * use `apply --css-mixin-name;` syntax instead of `apply(--css-minin-name);`
+- `iron-flex-layout`
+  * upgrade to 2.x
+
+#### at-carbon-tabs/at-carbon-tab  migration to Polymer 2.x
+Element structure
+- replace `<content>` with `<slot>`
+- replace `::content` selector with `::slotted` selector
