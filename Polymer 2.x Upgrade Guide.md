@@ -87,14 +87,14 @@ Element dependencies
 #### at-core-activity migration
 
 Element code
--- `element.properties.activeRequests.value` function must return empty array in Polymer 2.x. Existing `_setActiveRequests([])` doesn't work
--- Line 455: `this.$.msg.html = "";` should be changed to `if (this.$) this.$.msg.html = "";` to account for eleemnt not being attached
+- `element.properties.activeRequests.value` function must return empty array in Polymer 2.x. Existing `_setActiveRequests([])` doesn't work
+- Line 455: `this.$.msg.html = "";` should be changed to `if (this.$) this.$.msg.html = "";` to account for eleemnt not being attached
 
 #### core-ajax/core-request migration
 
 Element code
--- `element.properties.xhr.value` function must return new `XMLHttpRequest`in Polymer 2.x. Existing `_setXhr(new XMLHttpRequest())` doesn't work
--- `element.properties.response.value` function must return `null` in Polymer 2.x. Existing `_setResponse(null)` doesn't work
--- `element.properties.completes.value` function must return `completes` local variable in Polymer 2.x. Existing `_setCompletes(completes)` doesn't work
--- `element.properties.progress.value` function must return `{}` in Polymer 2.x. Existing `_setProgress({})` doesn't work
+- `element.properties.xhr.value` function must return new `XMLHttpRequest`in Polymer 2.x. Existing `_setXhr(new XMLHttpRequest())` doesn't work
+- `element.properties.response.value` function must return `null` in Polymer 2.x. Existing `_setResponse(null)` doesn't work
+- `element.properties.completes.value` function must return `completes` local variable in Polymer 2.x. Existing `_setCompletes(completes)` doesn't work
+- `element.properties.progress.value` function must return `{}` in Polymer 2.x. Existing `_setProgress({})` doesn't work
           
