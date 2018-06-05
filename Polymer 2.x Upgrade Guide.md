@@ -98,3 +98,17 @@ Element code
 - `element.properties.completes.value` function must return `completes` local variable in Polymer 2.x. Existing `_setCompletes(completes)` doesn't work
 - `element.properties.progress.value` function must return `{}` in Polymer 2.x. Existing `_setProgress({})` doesn't work
           
+#### at-core-style-classes
+- Due to issue described [here](https://github.com/Polymer/polymer/issues/5196), test suite will not pass until issue is fixed. 
+- Using the style dom modules to style main document works as can be seen in [this demo](https://github.com/TangereJs/Tangere/blob/master/demo/styling-main-document-with-style-modules.html)
+
+#### at-form-complex
+Element structure
+- use `apply --css-mixin-name;` syntax instead of `apply(--css-minin-name);`
+
+Element code
+- use displayTypeToFormElementMapping to compute elementName and pass that to schemaHelpers.createElement function
+- detect presence of shadowRoot when calling `getElement` and `_clearUIValidState`
+
+#### at-form-array
+- Scope of changes can be known only after `at-form-complex` works correctly, since `at-form-complex` is a direct dependency
