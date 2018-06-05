@@ -1,3 +1,13 @@
+#### Polymer 2.x observations
+##### Property changed handlers
+property changed handlers are not called when element is not attached. So, setting `.value` property to a new value will not trigger `_valueChanged` observer function.
+##### Observe changes to multiple properties
+In Polymer 1.x
+- Observers are not invoked until all dependent properties are defined `(!== undefined)`. So each dependent properties should have a default value defined in properties (or otherwise be initialized to a non-undefined value) to ensure the observer is called.
+
+In Polymer 2.x
+- Multi-property observers and computed properties run once at initialization if any dependencies are defined. After that, the observers run whenever there is `an observable change` to any dependency.
+
 #### at-carbon-dialog migration
 Element structure
 - replace `<content>` with `<slot>`
@@ -112,3 +122,11 @@ Element code
 
 #### at-form-array
 - Scope of changes can be known only after `at-form-complex` works correctly, since `at-form-complex` is a direct dependency
+
+#### at-form-daterange
+Element code
+
+Investigate why
+- [value-tests.html line 201](https://github.com/TangereJs/at-form-daterange/blob/master/test/value-tests.html#L201) **does not trigger** _updateDaterangeFromStartAndEndDate function in `Polymer 1.x`
+- [value-tests.html line 201](https://github.com/TangereJs/at-form-daterange/blob/master/test/value-tests.html#L201) **triggers** _updateDaterangeFromStartAndEndDate function in `Polymer 2.x`
+
