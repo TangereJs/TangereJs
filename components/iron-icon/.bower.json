@@ -56,11 +56,11 @@
     "webcomponentsjs": "^1.0.0"
   },
   "homepage": "https://github.com/PolymerElements/iron-icon",
-  "_release": "7f735696e8",
+  "_release": "cb1429c68c",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "7f735696e8d8f6edddb16d78da7da94a3638fa08"
+    "commit": "cb1429c68c07588e3869ab9b08a15827b0e5bffc"
   },
   "_source": "https://github.com/PolymerElements/iron-icon.git",
   "_target": "master",

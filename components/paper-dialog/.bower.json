@@ -65,11 +65,11 @@
   "resolutions": {
     "webcomponentsjs": "^1.0.0"
   },
-  "_release": "a8062c4393",
+  "_release": "351ad5702d",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "a8062c43938825faaa75617584aa4c6de37bb5f3"
+    "commit": "351ad5702df528881204e47d646b7efb56ba9977"
   },
   "_source": "https://github.com/PolymerElements/paper-dialog.git",
   "_target": "master",
