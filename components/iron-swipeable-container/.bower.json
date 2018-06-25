@@ -1,6 +1,6 @@
 {
   "name": "iron-swipeable-container",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A container that alows any of its nested children to be swiped away.",
   "authors": [
     "The Polymer Authors"
@@ -46,11 +46,11 @@
       }
     }
   },
-  "_release": "2.1.0",
+  "_release": "2.1.1",
   "_resolution": {
     "type": "version",
-    "tag": "v2.1.0",
-    "commit": "aba846aa90fa110ccf5c542496950a5204ce2b93"
+    "tag": "v2.1.1",
+    "commit": "ce26f90170c7dde58161546f3f6d9104cf9d66fd"
   },
   "_source": "https://github.com/PolymerElements/iron-swipeable-container.git",
   "_target": "*",
