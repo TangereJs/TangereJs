@@ -70,6 +70,6 @@ else
   fi
 fi
 totalms=$(expr $enddatems - $startdatems)
-echo "Tests executed in ${totalms} milliseconds"
+echo "Tests for ${compname} executed in ${totalms} milliseconds"
 echo "${compname},${totalms},${testresult}" >> ${tangerejs_dir}/tests_csv.log
 exit $script_result
