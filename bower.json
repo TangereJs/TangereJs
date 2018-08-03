@@ -9,7 +9,7 @@
     "font-roboto-local": "PolymerElements/font-roboto-local#master",
     "at-elements": "TangereJs/at-elements#master",
     "layout": "TangereJs/layout#master",
-    "iron-image": "PolymerElements/iron-image#d0699b5adf7a60d5d294c07d8765e3a3c5781b8c",
+    "iron-image": "PolymerElements/iron-image#^2.2.0",
     "iron-form": "PolymerElements/iron-form#^1.0.0"
   },
   "resolutions": {
@@ -22,7 +22,7 @@
     "paper-button": "master",
     "iron-icons": "master",
     "iron-iconset-svg": "master",
-    "iron-image": "d0699b5adf7a60d5d294c07d8765e3a3c5781b8c",
+    "iron-image": "^2.2.0",
     "iron-demo-helpers": "master",
     "iron-icon": "master",
     "paper-icon-button": "master",
