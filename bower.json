@@ -2,7 +2,7 @@
   "name": "tangerejs",
   "private": true,
   "dependencies": {
-    "polymer": "Polymer/polymer#^2.0.0",
+    "polymer": "Polymer/polymer#2.0.1",
     "async": "caolan/async#^2.6.0",
     "iron-elements": "PolymerElements/iron-elements#master",
     "paper-elements": "PolymerElements/paper-elements#master",
@@ -10,7 +10,8 @@
     "at-elements": "TangereJs/at-elements#master",
     "layout": "TangereJs/layout#master",
     "iron-image": "PolymerElements/iron-image#^2.2.0",
-    "iron-form": "PolymerElements/iron-form#^1.0.0"
+    "iron-form": "PolymerElements/iron-form#^1.0.0",
+    "iron-meta": "PolymerElements/iron-meta#^2.0.0"
   },
   "resolutions": {
     "async": "^2.6.0",
@@ -64,7 +65,7 @@
     "prism-element": "^1.1.0",
     "iron-input": "^1.0.0",
     "iron-menu-behavior": "^1.0.0",
-    "iron-meta": "^1.1.3",
+    "iron-meta": "^2.0.0",
     "promise-polyfill": "^1.0.1",
     "d3": "^3.4.15",
     "webcomponentsjs": "1.0.4",
