@@ -4,7 +4,7 @@
   "dependencies": {
     "polymer": "Polymer/polymer#^1.0.0",
     "async": "caolan/async#^2.6.0",
-    "iron-elements": "PolymerElements/iron-elements#^1.0.0",
+    "iron-elements": "PolymerElements/iron-elements#master",
     "paper-elements": "PolymerElements/paper-elements#^1.0.0",
     "font-roboto-local": "PolymerElements/font-roboto-local#^1.0.0",
     "at-elements": "TangereJs/at-elements#master",
@@ -23,7 +23,7 @@
     "iron-icons": "^1.0.0",
     "iron-iconset-svg": "^1.0.0",
     "iron-image": "^1.0.0",
-    "iron-demo-helpers": "^1.0.0",
+    "iron-demo-helpers": "master",
     "iron-icon": "^1.0.0",
     "paper-icon-button": "^1.0.0",
     "iron-collapse": "^1.0.0",
