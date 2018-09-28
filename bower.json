@@ -14,7 +14,8 @@
     
     "layout": "TangereJs/layout#master",
     "paper-elements": "PolymerElements/paper-elements#master",
-    
+    "paper-styles": "TangereJs/paper-styles#master",
+
     "polymer": "Polymer/polymer#^2.0.0",
     
     "webcomponentsjs": "^1.0.0"
@@ -78,7 +79,7 @@
     "paper-radio-button": "^2.0.0",
     "paper-radio-group": "^2.0.0",
     "paper-ripple": "^2.0.0",
-    "paper-styles": "^2.0.0",
+    "paper-styles": "master",
     "paper-toggle-button": "^2.0.0",
 
     "prism-element": "^2.0.0",
