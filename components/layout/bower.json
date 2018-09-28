@@ -15,6 +15,6 @@
   "private": true,
   "ignore": [],
   "dependencies": {
-    "polymer": "Polymer/polymer#master"
+    "tangere": "TangereJs/tangere#master"
   }
 }
