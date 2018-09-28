@@ -8,7 +8,7 @@
     "font-roboto-local": "PolymerElements/font-roboto-local#master",
     
     "iron-elements": "PolymerElements/iron-elements#master",
-    "iron-image": "PolymerElements/iron-image#^2.2.0",
+    "iron-image": "PolymerElements/iron-image#^2.0.0",
     "iron-form": "PolymerElements/iron-form#^1.0.0",
     "iron-meta": "PolymerElements/iron-meta#^2.0.0",
     
@@ -45,7 +45,7 @@
     "iron-form-element-behavior": "^1.0.0",
     "iron-icons": "master",
     "iron-iconset-svg": "^2.0.0",
-    "iron-image": "^2.2.0",
+    "iron-image": "^2.0.0",
     "iron-icon": "^2.0.0",
     "iron-input": "^1.0.0",
     "iron-label": "^2.0.0",
