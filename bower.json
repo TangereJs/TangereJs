@@ -11,6 +11,7 @@
     "iron-image": "PolymerElements/iron-image#^2.0.0",
     "iron-form": "PolymerElements/iron-form#^1.0.0",
     "iron-meta": "PolymerElements/iron-meta#^2.0.0",
+    "iron-test-helpers": "^2.0.0",
     
     "layout": "TangereJs/layout#master",
     "paper-elements": "PolymerElements/paper-elements#master",
@@ -56,6 +57,7 @@
     "iron-overlay-behavior": "^2.0.0",
     "iron-resizable-behavior": "^2.0.0",
     "iron-selector": "^2.0.0",
+    "iron-test-helpers": "^2.0.0",
     "iron-validatable-behavior": "^2.0.0",
 
     "layout": "master",
