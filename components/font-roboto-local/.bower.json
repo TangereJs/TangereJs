@@ -1,5 +1,6 @@
 {
   "name": "font-roboto-local",
+  "version": "1.1.0",
   "homepage": "https://github.com/PolymerElements/font-roboto-local",
   "authors": [
     "The Polymer Project Authors"
@@ -21,13 +22,13 @@
     "generate-style.js",
     "demo.html"
   ],
-  "_release": "c0f0c6868e",
+  "_release": "1.1.0",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "c0f0c6868e821d3807923e0526f7fd7459fdc797"
+    "type": "version",
+    "tag": "v1.1.0",
+    "commit": "a39d4086a41ad98d08d6c83947cf0feafb3b5a91"
   },
   "_source": "https://github.com/PolymerElements/font-roboto-local.git",
-  "_target": "master",
+  "_target": "^1.0.0",
   "_originalSource": "PolymerElements/font-roboto-local"
 }

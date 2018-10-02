@@ -66,6 +66,6 @@
     "commit": "cdd2b90f046807ffdccb0295a3e4ac58e074f351"
   },
   "_source": "https://github.com/PolymerElements/paper-badge.git",
-  "_target": "*",
+  "_target": "^2.0.0",
   "_originalSource": "PolymerElements/paper-badge"
 }

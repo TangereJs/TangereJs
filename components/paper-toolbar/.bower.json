@@ -68,6 +68,6 @@
     "commit": "dfe62c62962e8a02559311d18bad9b14e82a8103"
   },
   "_source": "https://github.com/PolymerElements/paper-toolbar.git",
-  "_target": "*",
+  "_target": "^2.0.0",
   "_originalSource": "PolymerElements/paper-toolbar"
 }

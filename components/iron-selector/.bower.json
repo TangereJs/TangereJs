@@ -1,5 +1,6 @@
 {
   "name": "iron-selector",
+  "version": "2.1.0",
   "description": "Manages a set of elements that can be selected",
   "private": true,
   "license": "http://polymer.github.io/LICENSE.txt",
@@ -55,13 +56,13 @@
   "resolutions": {
     "webcomponentsjs": "^1.0.0"
   },
-  "_release": "c375e5021e",
+  "_release": "2.1.0",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "c375e5021e58e756da9644638495380f4ea2fae2"
+    "type": "version",
+    "tag": "v2.1.0",
+    "commit": "82e8bf6bd3c3bf5a3605271e8ef1ee2cb68f053c"
   },
   "_source": "https://github.com/PolymerElements/iron-selector.git",
-  "_target": "master",
+  "_target": "1 - 2",
   "_originalSource": "PolymerElements/iron-selector"
 }

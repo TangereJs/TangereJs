@@ -53,6 +53,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </test-fixture>
 
   <script>
+
     var s;
 
     function assertAndSelect(method, expectedIndex) {
@@ -61,6 +62,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     suite('next/previous', function() {
+
       setup(function(done) {
         s = fixture('test1');
 
@@ -96,20 +98,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         assert.equal(s.selected, 1);
       });
 
-      test('selectNext from unselected', function() {
-        s.selected = undefined;
-        assertAndSelect('selectNext', undefined);
-        assert.equal(s.selected, 0);
-      });
-
-      test('selectPrevious from unselected', function() {
-        s.selected = undefined;
-        assertAndSelect('selectPrevious', undefined);
-        assert.equal(s.selected, 2);
-      });
     });
 
     suite('next/previous attrForSelected', function() {
+
       setup(function(done) {
         s = fixture('test2');
 
@@ -144,7 +136,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         assertAndSelect('selectPrevious', 'zot');
         assert.equal(s.selected, 'bar');
       });
+
     });
+
   </script>
 
 </body>

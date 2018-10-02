@@ -1,5 +1,4 @@
 [![Build status](https://travis-ci.org/PolymerElements/iron-resizable-behavior.svg?branch=master)](https://travis-ci.org/PolymerElements/iron-resizable-behavior)
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://webcomponents.org/element/PolymerElements/iron-resizable-behavior)
 
 _[Demo and API docs](https://elements.polymer-project.org/elements/iron-resizable-behavior)_
 

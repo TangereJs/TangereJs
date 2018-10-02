@@ -8,6 +8,7 @@
     "font-roboto-local": "PolymerElements/font-roboto-local#^1.0.0",
     
     "iron-elements": "PolymerElements/iron-elements#master",
+    "iron-a11y-keys": "PolymerElements/iron-a11y-keys#^2.0.0",
     "iron-image": "PolymerElements/iron-image#^2.0.0",
     "iron-form": "PolymerElements/iron-form#^2.0.0",
 	  "iron-list": "PolymerElements/iron-list#^2.0.0",
@@ -54,6 +55,7 @@
     "google-map": "master",
     
     "iron-a11y-announcer": "^2.0.0",
+    "iron-a11y-keys": "^2.0.0",
     "iron-a11y-keys-behavior": "^2.0.0",
     "iron-autogrow-textarea": "^2.0.0",
     "iron-behaviors": "^2.0.0",

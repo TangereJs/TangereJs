@@ -28,8 +28,7 @@ declare namespace Polymer {
     attrForSelected: string|null|undefined;
 
     /**
-     * Gets or sets the selected element. The default is to use the index of the
-     * item.
+     * Gets or sets the selected element. The default is to use the index of the item.
      */
     selected: string|number;
 
@@ -46,8 +45,8 @@ declare namespace Polymer {
     activateEvent: string|null|undefined;
 
     /**
-     * This is a CSS selector string.  If this is set, only items that match the
-     * CSS selector are selectable.
+     * This is a CSS selector string.  If this is set, only items that match the CSS selector
+     * are selectable.
      */
     selectable: string|null|undefined;
 
@@ -62,8 +61,8 @@ declare namespace Polymer {
     selectedAttribute: string|null|undefined;
 
     /**
-     * Default fallback if the selection based on selected with
-     * `attrForSelected` is not found.
+     * Default fallback if the selection based on selected with `attrForSelected`
+     * is not found.
      */
     fallbackSelection: string|null|undefined;
 
