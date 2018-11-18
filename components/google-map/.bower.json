@@ -47,11 +47,11 @@
       }
     }
   },
-  "_release": "12c10afdd3",
+  "_release": "65c597bff5",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "12c10afdd3bbbc93bf9683106c0a6c72fee1773f"
+    "commit": "65c597bff5a5634547013e663885de324e39609e"
   },
   "_source": "https://github.com/GoogleWebComponents/google-map.git",
   "_target": "master",
