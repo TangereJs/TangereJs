@@ -1,0 +1,8 @@
+{
+  "name": "ie11-build",
+  "version": "0.0.1.4",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0"
+  }
+}

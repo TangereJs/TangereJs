@@ -1,0 +1,36 @@
+<link rel="import" href="components/polymer/polymer-element.html">
+
+<dom-module id="ie11build-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `ie11build-element`
+     * lorem ipsum
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class Ie11buildElement extends Polymer.Element {
+      static get is() { return 'ie11build-element'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'ie11build-element'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(Ie11buildElement.is, Ie11buildElement);
+  </script>
+</dom-module>

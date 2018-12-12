@@ -1,0 +1,51 @@
+<link rel="import" href="components/polymer/polymer-element.html">
+
+<dom-module id="ie11build-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>/**
+ * `ie11build-element`
+ * lorem ipsum
+ *
+ * @customElement
+ * @polymer
+ * @demo demo/index.html
+ */
+var Ie11buildElement =
+/*#__PURE__*/
+function (_Polymer$Element) {
+  babelHelpers.inherits(Ie11buildElement, _Polymer$Element);
+
+  function Ie11buildElement() {
+    babelHelpers.classCallCheck(this, Ie11buildElement);
+    return babelHelpers.possibleConstructorReturn(this, babelHelpers.getPrototypeOf(Ie11buildElement).apply(this, arguments));
+  }
+
+  babelHelpers.createClass(Ie11buildElement, null, [{
+    key: "is",
+    get: function get() {
+      return 'ie11build-element';
+    }
+  }, {
+    key: "properties",
+    get: function get() {
+      return {
+        prop1: {
+          type: String,
+          value: 'ie11build-element'
+        }
+      };
+    }
+  }]);
+  return Ie11buildElement;
+}(Polymer.Element);
+
+window.customElements.define(Ie11buildElement.is, Ie11buildElement);</script>
+</dom-module>
