@@ -64,12 +64,12 @@
     "webcomponentsjs": "^1.0.0"
   },
   "homepage": "https://github.com/PolymerElements/paper-slider",
-  "version": "2.0.7",
-  "_release": "2.0.7",
+  "version": "2.0.9",
+  "_release": "2.0.9",
   "_resolution": {
     "type": "version",
-    "tag": "v2.0.7",
-    "commit": "cc628c540d16d6ce1deeb8010ab99983d87fdf0c"
+    "tag": "v2.0.9",
+    "commit": "60e2b728cc86ae020a394e99de8e724aa100d6bf"
   },
   "_source": "https://github.com/PolymerElements/paper-slider.git",
   "_target": "^2.0.0",
