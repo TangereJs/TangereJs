@@ -40,6 +40,7 @@ at-chart-core
 at-chart-inline
 at-chart-strudel
 at-core-activity
+at-core-activity-queue
 at-core-api-post
 at-core-busy
 at-core-card
