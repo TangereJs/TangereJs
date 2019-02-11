@@ -1,7 +1,7 @@
 {
   "name": "paper-icon-button",
   "private": true,
-  "version": "2.2.0",
+  "version": "2.2.1",
   "license": "http://polymer.github.io/LICENSE.txt",
   "description": "A material design icon button",
   "main": [
@@ -59,11 +59,11 @@
     "webcomponentsjs": "^1.0.0"
   },
   "homepage": "https://github.com/PolymerElements/paper-icon-button",
-  "_release": "2.2.0",
+  "_release": "2.2.1",
   "_resolution": {
     "type": "version",
-    "tag": "v2.2.0",
-    "commit": "bb7d6980b48866c63cd9466d155a8beabc8058d9"
+    "tag": "v2.2.1",
+    "commit": "d13812e2944c481e55f175642426e27edbc72a39"
   },
   "_source": "https://github.com/PolymerElements/paper-icon-button.git",
   "_target": "1 - 2",
