@@ -11,7 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 'use strict';
 
 import {parse, StyleNode} from './css-parse.js';
-import {nativeShadow, nativeCssVariables} from './style-settings.js';
+import {nativeShadow, nativeCssVariables, disableRuntime} from './style-settings.js';
 import StyleTransformer from './style-transformer.js';
 import * as StyleUtil from './style-util.js';
 import StyleProperties from './style-properties.js';
@@ -23,6 +23,9 @@ import templateMap from './template-map.js';
 import * as ApplyShimUtils from './apply-shim-utils.js';
 import {updateNativeProperties, detectMixin} from './common-utils.js';
 import {CustomStyleInterfaceInterface} from './custom-style-interface.js'; // eslint-disable-line no-unused-vars
+
+/** @type {!Object<string, string>} */
+const adoptedCssTextMap = {};
 
 /**
  * @const {StyleCache}
@@ -76,7 +79,7 @@ export default class ScopingShim {
    * @param {string=} typeExtension
    */
   prepareTemplateStyles(template, elementName, typeExtension) {
-    if (template._prepared) {
+    if (template._prepared || disableRuntime) {
       return;
     }
     // style placeholders are only used when ShadyDOM is active
@@ -93,7 +96,7 @@ export default class ScopingShim {
       is: elementName,
       extends: typeExtension,
     };
-    let cssText = this._gatherStyles(template);
+    let cssText = this._gatherStyles(template) + (adoptedCssTextMap[elementName] || '');
     // check if the styling has mixin definitions or uses
     this._ensure();
     if (!optimalBuild) {
@@ -117,12 +120,23 @@ export default class ScopingShim {
     }
     template._ownPropertyNames = ownPropertyNames;
   }
+
+  /**
+   * @param {!Array<string>} cssTextArray
+   * @param {string} elementName
+   */
+  prepareAdoptedCssText(cssTextArray, elementName) {
+    adoptedCssTextMap[elementName] = cssTextArray.join(' ');
+  }
   /**
    * Prepare template for the given element type
    * @param {!HTMLTemplateElement} template
    * @param {string} elementName
    */
   prepareTemplateDom(template, elementName) {
+    if (disableRuntime) {
+      return;
+    }
     const cssBuild = StyleUtil.getCssBuild(template);
     if (!nativeShadow && cssBuild !== 'shady' && !template._domPrepared) {
       template._domPrepared = true;
@@ -198,6 +212,9 @@ export default class ScopingShim {
    * Flush and apply custom styles to document
    */
   flushCustomStyles() {
+    if (disableRuntime) {
+      return;
+    }
     this._ensure();
     if (!this._customStyleInterface) {
       return;
@@ -230,6 +247,17 @@ export default class ScopingShim {
    * @param {Object=} overrideProps
    */
   styleElement(host, overrideProps) {
+    if (disableRuntime) {
+      if (overrideProps) {
+        if (!StyleInfo.get(host)) {
+          StyleInfo.set(host, new StyleInfo(null));
+        }
+        const styleInfo = /** @type {!StyleInfo} */(StyleInfo.get(host));
+        this._mixOverrideStyleProps(styleInfo, overrideProps);
+        this.styleElementNativeVariables(host, styleInfo);
+      }
+      return;
+    }
     const styleInfo = StyleInfo.get(host) || this._prepareHost(host);
     // if there is no style info at this point, bail
     if (!styleInfo) {
@@ -240,15 +268,22 @@ export default class ScopingShim {
       this._elementsHaveApplied = true;
     }
     if (overrideProps) {
-      styleInfo.overrideStyleProperties =
-        styleInfo.overrideStyleProperties || {};
-      Object.assign(styleInfo.overrideStyleProperties, overrideProps);
+      this._mixOverrideStyleProps(styleInfo, overrideProps);
     }
     if (!nativeCssVariables) {
       this.styleElementShimVariables(host, styleInfo);
     } else {
       this.styleElementNativeVariables(host, styleInfo);
     }
+  }
+  /**
+   * @param {!StyleInfo} styleInfo
+   * @param {Object} overrideProps
+   */
+  _mixOverrideStyleProps(styleInfo, overrideProps) {
+    styleInfo.overrideStyleProperties =
+      styleInfo.overrideStyleProperties || {};
+    Object.assign(styleInfo.overrideStyleProperties, overrideProps);
   }
   /**
    * @param {!HTMLElement} host
@@ -382,7 +417,8 @@ export default class ScopingShim {
    * @param {Object=} properties
    */
   styleSubtree(host, properties) {
-    let root = host.shadowRoot;
+    const wrappedHost = StyleUtil.wrap(host);
+    let root = wrappedHost.shadowRoot;
     if (root || this._isRootOwner(host)) {
       this.styleElement(host, properties);
     }
@@ -396,7 +432,7 @@ export default class ScopingShim {
       }
     } else {
       // process the lightdom children of `host`
-      let children = host.children || host.childNodes;
+      let children = wrappedHost.children || wrappedHost.childNodes;
       if (children) {
         for (let i = 0; i < children.length; i++) {
           let c = /** @type {!HTMLElement} */(children[i]);
@@ -555,6 +591,7 @@ ScopingShim.prototype['scopeNode'] = ScopingShim.prototype.scopeNode;
 ScopingShim.prototype['unscopeNode'] = ScopingShim.prototype.unscopeNode;
 ScopingShim.prototype['scopeForNode'] = ScopingShim.prototype.scopeForNode;
 ScopingShim.prototype['currentScopeForNode'] = ScopingShim.prototype.currentScopeForNode;
+ScopingShim.prototype['prepareAdoptedCssText'] = ScopingShim.prototype.prepareAdoptedCssText;
 /* eslint-enable no-self-assign */
 Object.defineProperties(ScopingShim.prototype, {
   'nativeShadow': {

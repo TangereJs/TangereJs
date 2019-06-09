@@ -46,6 +46,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         this._callback = callback;
         this._timer = this._asyncModule.run(function () {
           _this._timer = null;
+          debouncerQueue.delete(_this);
 
           _this._callback();
         });
@@ -60,7 +61,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       key: "cancel",
       value: function cancel() {
         if (this.isActive()) {
-          this._asyncModule.cancel(this._timer);
+          this._cancelAsync(); // Canceling a debouncer removes its spot from the flush queue,
+          // so if a debouncer is manually canceled and re-debounced, it
+          // will reset its flush order (this is a very minor difference from 1.x)
+          // Re-debouncing via the `debounce` API retains the 1.x FIFO flush order
+
+
+          debouncerQueue.delete(this);
+        }
+      }
+      /**
+       * Cancels a debouncer's async callback.
+       *
+       * @return {void}
+       */
+
+    }, {
+      key: "_cancelAsync",
+      value: function _cancelAsync() {
+        if (this.isActive()) {
+          this._asyncModule.cancel(
+          /** @type {number} */
+          this._timer);
 
           this._timer = null;
         }
@@ -126,7 +148,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       key: "debounce",
       value: function debounce(debouncer, asyncModule, callback) {
         if (babelHelpers.instanceof(debouncer, Debouncer)) {
-          debouncer.cancel();
+          // Cancel the async callback, but leave in debouncerQueue if it was
+          // enqueued, to maintain 1.x flush order
+          debouncer._cancelAsync();
         } else {
           debouncer = new Debouncer();
         }
@@ -141,4 +165,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 
   Polymer.Debouncer = Debouncer;
+  var debouncerQueue = new Set();
+  /**
+   * Adds a `Debouncer` to a list of globally flushable tasks.
+   *
+   * @memberof Polymer
+   * @param {!Debouncer} debouncer Debouncer to enqueue
+   * @return {void}
+   */
+
+  Polymer.enqueueDebouncer = function (debouncer) {
+    debouncerQueue.add(debouncer);
+  };
+
+  Polymer.flushDebouncers = function () {
+    var didFlush = Boolean(debouncerQueue.size); // If new debouncers are added while flushing, Set.forEach will ensure
+    // newly added ones are also flushed
+
+    debouncerQueue.forEach(function (debouncer) {
+      try {
+        debouncer.flush();
+      } catch (e) {
+        setTimeout(function () {
+          throw e;
+        });
+      }
+    });
+    return didFlush;
+  };
 })();</script>

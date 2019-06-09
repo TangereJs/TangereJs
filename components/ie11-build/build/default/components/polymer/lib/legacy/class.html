@@ -41,20 +41,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   function copyProperties(source, target, excludeProps) {
     var noAccessors = source._noAccessors;
+    var propertyNames = Object.getOwnPropertyNames(source);
 
-    for (var p in source) {
-      if (!(p in excludeProps)) {
-        if (noAccessors) {
-          target[p] = source[p];
-        } else {
-          var pd = Object.getOwnPropertyDescriptor(source, p);
+    for (var i = 0; i < propertyNames.length; i++) {
+      var p = propertyNames[i];
 
-          if (pd) {
-            // ensure property is configurable so that a later behavior can
-            // re-configure it.
-            pd.configurable = true;
-            Object.defineProperty(target, p, pd);
-          }
+      if (p in excludeProps) {
+        continue;
+      }
+
+      if (noAccessors) {
+        target[p] = source[p];
+      } else {
+        var pd = Object.getOwnPropertyDescriptor(source, p);
+
+        if (pd) {
+          // ensure property is configurable so that a later behavior can
+          // re-configure it.
+          pd.configurable = true;
+          Object.defineProperty(target, p, pd);
         }
       }
     }

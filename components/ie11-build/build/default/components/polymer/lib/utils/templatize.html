@@ -99,7 +99,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       for (var n = _this.root.firstChild; n; n = n.nextSibling) {
         children.push(n);
-        n.__templatizeInstance = babelHelpers.assertThisInitialized(babelHelpers.assertThisInitialized(_this));
+        n.__templatizeInstance = babelHelpers.assertThisInitialized(_this);
       }
 
       if (_this.__templatizeOwner && _this.__templatizeOwner.__hideTemplateChildren__) {

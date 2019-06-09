@@ -415,7 +415,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   this.items[idx] = value;
                 }
 
-                var path = Polymer.Path.translate(this.as, 'items.' + idx, prop);
+                var path = Polymer.Path.translate(this.as, "".concat(JSCompiler_renameProperty('items', this), ".").concat(idx), prop);
                 this.notifyPath(path, value);
               }
             }

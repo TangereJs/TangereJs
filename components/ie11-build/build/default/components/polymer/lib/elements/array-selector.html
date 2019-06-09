@@ -128,7 +128,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         value: function __updateSelection(multi, itemsInfo) {
           var path = itemsInfo.path;
 
-          if (path == 'items') {
+          if (path == JSCompiler_renameProperty('items', this)) {
             // Case 1 - items array changed, so diff against previous array and
             // deselect any removed items and adjust selected indices
             var newItems = itemsInfo.base || [];
@@ -147,14 +147,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             this.__lastItems = newItems;
             this.__lastMulti = multi;
-          } else if (itemsInfo.path == 'items.splices') {
+          } else if (itemsInfo.path == "".concat(JSCompiler_renameProperty('items', this), ".splices")) {
             // Case 2 - got specific splice information describing the array mutation:
             // deselect any removed items and adjust selected indices
             this.__applySplices(itemsInfo.value.indexSplices);
           } else {
             // Case 3 - an array element was changed, so deselect the previous
             // item for that index if it was previously selected
-            var part = path.slice('items.'.length);
+            var part = path.slice("".concat(JSCompiler_renameProperty('items', this), ".").length);
             var idx = parseInt(part, 10);
 
             if (part.indexOf('.') < 0 && part == idx) {
@@ -203,7 +203,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           selected.forEach(function (idx, item) {
             if (idx < 0) {
               if (_this2.multi) {
-                _this2.splice('selected', sidx, 1);
+                _this2.splice(JSCompiler_renameProperty('selected', _this2), sidx, 1);
               } else {
                 _this2.selected = _this2.selectedItem = null;
               }
@@ -226,14 +226,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             this.__selectedMap.forEach(function (idx) {
               if (idx >= 0) {
-                _this3.linkPaths('items.' + idx, 'selected.' + sidx++);
+                _this3.linkPaths("".concat(JSCompiler_renameProperty('items', _this3), ".").concat(idx), "".concat(JSCompiler_renameProperty('selected', _this3), ".").concat(sidx++));
               }
             });
           } else {
             this.__selectedMap.forEach(function (idx) {
-              _this3.linkPaths('selected', 'items.' + idx);
+              _this3.linkPaths(JSCompiler_renameProperty('selected', _this3), "".concat(JSCompiler_renameProperty('items', _this3), ".").concat(idx));
 
-              _this3.linkPaths('selectedItem', 'items.' + idx);
+              _this3.linkPaths(JSCompiler_renameProperty('selectedItem', _this3), "".concat(JSCompiler_renameProperty('items', _this3), ".").concat(idx));
             });
           }
         }
@@ -300,10 +300,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }, {
         key: "__selectedIndexForItemIndex",
         value: function __selectedIndexForItemIndex(idx) {
-          var selected = this.__dataLinkedPaths['items.' + idx];
+          var selected = this.__dataLinkedPaths["".concat(JSCompiler_renameProperty('items', this), ".").concat(idx)];
 
           if (selected) {
-            return parseInt(selected.slice('selected.'.length), 10);
+            return parseInt(selected.slice("".concat(JSCompiler_renameProperty('selected', this), ".").length), 10);
           }
         }
         /**
@@ -330,7 +330,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             this.__updateLinks();
 
             if (this.multi) {
-              this.splice('selected', sidx, 1);
+              this.splice(JSCompiler_renameProperty('selected', this), sidx, 1);
             } else {
               this.selected = this.selectedItem = null;
             }
@@ -384,7 +384,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             this.__updateLinks();
 
             if (this.multi) {
-              this.push('selected', item);
+              this.push(JSCompiler_renameProperty('selected', this), item);
             } else {
               this.selected = this.selectedItem = item;
             }

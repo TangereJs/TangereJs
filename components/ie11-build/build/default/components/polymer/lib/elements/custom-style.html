@@ -72,7 +72,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       babelHelpers.classCallCheck(this, CustomStyle);
       _this = babelHelpers.possibleConstructorReturn(this, babelHelpers.getPrototypeOf(CustomStyle).call(this));
       _this._style = null;
-      CustomStyleInterface.addCustomStyle(babelHelpers.assertThisInitialized(babelHelpers.assertThisInitialized(_this)));
+      CustomStyleInterface.addCustomStyle(babelHelpers.assertThisInitialized(_this));
       return _this;
     }
     /**
@@ -85,7 +85,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 
     babelHelpers.createClass(CustomStyle, [{
-      key: "getStyle",
+      key: 'getStyle',
       value: function getStyle() {
         if (this._style) {
           return this._style;
