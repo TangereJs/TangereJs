@@ -6,7 +6,7 @@
 
 var examples = {};
 
-var treeURL = 'https://api.github.com/repos/PrismJS/prism/git/trees/gh-pages?recursive=1';
+var treeURL = 'https://api.github.com/repos/PrismJS/prism/git/trees/master?recursive=1';
 var treePromise = new Promise(function (resolve) {
 	$u.xhr({
 		url: treeURL,
@@ -112,7 +112,7 @@ function buildContentsHeader(id) {
 	}
 	if (language.alias) {
 		var alias = language.alias;
-		if (Prism.util.type(alias) !== 'Array') {
+		if (!Array.isArray(alias)) {
 			alias = [alias];
 		}
 
@@ -127,7 +127,7 @@ function buildContentsHeader(id) {
 	}
 	if (language.require) {
 		var require = language.require;
-		if (Prism.util.type(require) !== 'Array') {
+		if (!Array.isArray(require)) {
 			require = [require];
 		}
 

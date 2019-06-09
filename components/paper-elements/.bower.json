@@ -32,11 +32,11 @@
     "paper-styles": "PolymerElements/paper-styles#*"
   },
   "main": "paper-elements.html",
-  "_release": "b20e74073c",
+  "_release": "0e5e5dd057",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "b20e74073c1c7bdd92264d826b41ea9fceb85f65"
+    "commit": "0e5e5dd057f42df6d458606aad79d80e60623f44"
   },
   "_source": "https://github.com/PolymerElements/paper-elements.git",
   "_target": "master",
