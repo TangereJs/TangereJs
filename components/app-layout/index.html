@@ -1,30 +1,84 @@
 <!doctype html>
-<!--
-@license
-Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
 <html>
+
 <head>
-
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>Static HTML Chat sample</title>
+  
+  <style>
 
-  <title>app-layout</title>
+    body, h1 {
+      margin: 12px !important;
+    }
 
-  <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    .xcontainer {     
+      width: 350px;
+      height: 650px;
+      border: 1px solid lightblue;
+      margin: 12px;
+      margin-top: 28px;
+    }
 
-  <link rel="import" href="../polymer/polymer.html">
-  <link rel="import" href="../iron-component-page/iron-component-page.html">
+    #c1 {
+      height: 650px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+  </style>
+
 
 </head>
+
 <body>
 
-  <iron-component-page></iron-component-page>
+  <!-- 1. add the following line in <body> -->
+  <script src="http://localhost/components/at-app/at-app-context.js" id="at-app-context" async include-element token="u:xUHOJ7L3HGR0nBB4BdlbzPCYpJmzo5ww"></script>
+
+
+  <h1>Chat</h1>
+
+  <div class="xcontainer">
+
+    <!-- 2. include a card -->
+    <include-element id="c1" name="at-carbon-chat/at-carbon-chat.html"></include-element>
+
+  </div>
+
+  <div id="buttons" class="row hidden">
+    <button class="block-cell" type="button" id="chatInputButton">chat-input</button>
+    <button class="block-cell" type="button" id="chatCommandButton">chat-command</button>
+  </div>
+
+  <script>
+    document.addEventListener('session-ready', function () {
+
+      var buttons = document.getElementById('buttons');
+      var chatInputButton = document.getElementById('chatInputButton');
+      var chatCommandButton = document.getElementById('chatCommandButton');
+
+      buttons.classList.remove('hidden');
+
+      chatInputButton.addEventListener('click', function () {
+
+        Polymer.signal('chat-input', {
+          text: "show me the"
+        });
+
+      });
+
+      chatCommandButton.addEventListener('click', function () {
+
+        Polymer.signal('chat-command', {
+          text: "Hello World!"
+        });
+      });
+
+    });
+  </script>
 
 </body>
+
 </html>
