@@ -1,15 +1,12 @@
 {
   "name": "promise-polyfill",
+  "version": "1.0.1",
   "homepage": "https://github.com/taylorhakes/promise-polyfill",
   "authors": [
     "Taylor Hakes"
   ],
   "description": "Lightweight promise polyfill for the browser and node. A+ Compliant.",
-  "main": [
-    "Promise.js",
-    "promise-polyfill.html",
-    "promise-polyfill-lite.html"
-  ],
+  "main": "Promise.js",
   "moduleType": [
     "globals",
     "node"
@@ -28,13 +25,16 @@
     "test",
     "tests"
   ],
-  "_release": "a4d379cb8c",
+  "dependencies": {
+    "polymer": "polymer/polymer#^1.0.0"
+  },
+  "_release": "1.0.1",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "a4d379cb8c5a07032c296ba15006527182a99727"
+    "type": "version",
+    "tag": "v1.0.1",
+    "commit": "263b98bcc9b746a8852bf57ce1500c71222680b9"
   },
   "_source": "https://github.com/polymerlabs/promise-polyfill.git",
-  "_target": "master",
+  "_target": "^1.0.0",
   "_originalSource": "polymerlabs/promise-polyfill"
 }
