@@ -1,12 +1,12 @@
 {
   "name": "promise-polyfill",
-  "version": "1.0.1",
+  "version": "2.0.1",
   "homepage": "https://github.com/taylorhakes/promise-polyfill",
   "authors": [
     "Taylor Hakes"
   ],
   "description": "Lightweight promise polyfill for the browser and node. A+ Compliant.",
-  "main": "Promise.js",
+  "main": ["Promise.js", "promise-polyfill.html", "promise-polyfill-lite.html"],
   "moduleType": [
     "globals",
     "node"
@@ -24,8 +24,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "polymer": "polymer/polymer#^1.0.0"
-  }
+  ]
 }
