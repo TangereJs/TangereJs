@@ -42,6 +42,7 @@ at-core-activity
 at-core-activity-queue
 at-core-api-post
 at-core-busy
+at-core-bottom-sheet
 at-core-card
 at-core-cardlayout
 at-core-cardlist
