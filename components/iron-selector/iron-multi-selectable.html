@@ -65,11 +65,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
      * @param {string|number} value the value to select.
      */
     select: function(value) {
+      if (this._isIneligibleForSelection(this._valueToItem(value))) {
+        return false;
+      }
+
       if (this.multi) {
         this._toggleSelected(value);
       } else {
         this.selected = value;
       }
+    },
+
+    _isIneligibleForSelection: function(item) {
+      if (item) {
+        return item.hasAttribute('disabled');
+      }
+      return false;
     },
 
     multiChanged: function(multi) {
